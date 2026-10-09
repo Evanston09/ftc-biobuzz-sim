@@ -9,7 +9,7 @@ interface Row { seed: number; red: number; blue: number; redTips: number; blueTi
 const rows: Row[] = []; let next = 0;
 await new Promise<void>(done => { let live = 0; const launch = () => {
   if (next >= seeds.length) { if (live === 0) done(); return; } const seed = seeds[next++]; live++;
-  const child = spawn('npx', ['tsx', 'scripts/eval-worker.ts', String(seed)], { stdio: ['ignore', 'pipe', 'inherit'] }); let out = ''; child.stdout.on('data', d => { out += d; });
+  const child = spawn(process.execPath, ['--import', 'tsx', 'scripts/eval-worker.ts', String(seed)], { stdio: ['ignore', 'pipe', 'inherit'] }); let out = ''; child.stdout.on('data', d => { out += d; });
   child.on('close', () => { live--; try { rows.push(JSON.parse(out.trim().split('\n').pop()!)); } catch { console.error(`seed ${seed}: no result`); } launch(); }); };
   for (let i = 0; i < Number(parArg); i++) launch(); });
 const mean = (v: number[]) => v.reduce((a, b) => a + b, 0) / (v.length || 1), se = (v: number[]) => Math.sqrt(v.reduce((a, b) => a + (b - mean(v)) ** 2, 0) / Math.max(1, v.length - 1) / (v.length || 1));

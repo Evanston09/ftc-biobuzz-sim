@@ -36,6 +36,34 @@ describe('drivetrain', () => {
 });
 
 describe('shooting and HIVE TIP', () => {
+  it.each([false, true])('changes preview and actual exit angle with the hood (turret=%s)', turret => {
+    const shoot = (angle: number, kind: 'pollen' | 'nectar_red') => {
+      const config = structuredClone(DEFAULT_ROBOT);
+      config.shooter.hoodAngleDeg = angle; config.shooter.turret = turret;
+      for (const lp of [config.shooter.pollen, config.shooter.nectar]) {
+        lp.elevationDeg.std = 0; lp.yawStdDeg = 0; lp.speed.std = 0;
+      }
+      const sim = new Sim(RAPIER, undefined, 'practice', 7, { configFor: () => structuredClone(config) });
+      sim.robot.setTranslation({ x: -1.2, y: sim.robot.translation().y, z: 1.2 }, true);
+      const preview = sim.previewShot(kind === 'pollen' ? 'pollen' : 'nectar');
+      const before = new Set(sim.balls.keys()); sim.carried = [kind];
+      sim.step({ ...NO_INPUT, shootPollen: kind === 'pollen', shootNectar: kind !== 'pollen' });
+      const ball = [...sim.balls.values()].find(b => !before.has(b.id) && b.kind === kind)!;
+      expect(ball).toBeDefined();
+      const velocity = ball.body.linvel();
+      const elevation = Math.atan2(velocity.y, Math.hypot(velocity.x, velocity.z)) * 180 / Math.PI;
+      sim.world.free();
+      return { preview, elevation };
+    };
+    for (const kind of ['pollen', 'nectar_red'] as const) {
+      const low = shoot(35, kind), high = shoot(75, kind);
+      expect(low.elevation).toBeCloseTo(35, 0);
+      expect(high.elevation).toBeCloseTo(75, 0);
+      expect(high.preview.points[0][1]).toBeGreaterThan(low.preview.points[0][1]);
+      expect(high.preview.points).not.toEqual(low.preview.points);
+    }
+  });
+
   it('tips the red HIVE with POLLEN launched from the aiming distance', () => {
     const s = new Sim(RAPIER, undefined, 'practice', 7);
     const y = s.robot.translation().y;

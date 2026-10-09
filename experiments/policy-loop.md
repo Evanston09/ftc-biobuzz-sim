@@ -194,3 +194,11 @@ for a fifth. On four seeds it scored three AUTO TIPS, where the committed pair s
   circle on its own side, so it can't stand there, although a robot that is square to the wall fits.
 - Stalls are still 4 per robot per MATCH, mostly contention at the launch spots.
 - The 13 s per robot of settling is physical braking. A robot that launches while it moves would remove it.
+
+## Configurable automatic hood — October 8, 2026
+
+Kept as an optional shooter implementation; fixed angle remains the default. The hood has configurable minimum/maximum exit angles and a finite slew speed. AUTO’s existing `shooter.shoot` leaf waits for hood settling and a scoring preview through `shooter.aimed`; TELEOP fire control also checks readiness. Gravity/drag distance aiming runs at 20 Hz and physics updates the actuator every step.
+
+Measured 21 automatic ranges and two fixed-angle controls at eight paired seeds, then three finalists at 24 seeds. All four bots were otherwise identical `defaultBot` builds with fixed rear-facing shooters and front intakes. The recommended automatic default is 55–66° at 120°/s: 767.7 combined points, statistically tied with 20–65° (767.2) and 55–65° (763.3). Against `hood-fixed-reference-20261008` (819.1), `hood-validation-nearby-20261008-55-66` lost 51.4 ± 9.4 combined points (paired SE, n=24). The AUTO component fell from 172.2 to 127.8. This is a configurable mechanism experiment, not a points improvement to the default policy. Existing launch spots and routes were retained; the preview/solver still omit backspin lift.
+
+Ran `npx tsx scripts/eval.ts hood-fixed-reference-20261008 24 6`, the same evaluator through `scripts/hood-sweep.ts`, and `python3 scripts/eval-compare.py hood-fixed-reference-20261008 hood-validation-nearby-20261008-55-66`. Raw per-seed results are in `policy-loop.jsonl`; all tested ranges, confidence limits, assumptions, and reproduction commands are in `hood-results.md`.

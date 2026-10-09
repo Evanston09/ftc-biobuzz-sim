@@ -1,3 +1,4 @@
+import { HOOD, hoodLimits } from './sim/hood';
 import { fmtMass, fmtSize, fmtSpeed, type Units } from './units';
 import { DEFAULT_ROBOT, setDriveRpm, setMass, setSquareSize, type RobotConfig, type ShooterType } from './sim/config';
 
@@ -8,6 +9,9 @@ export interface BotSetup {
   driver: DriverKind;
   /** For a human driver: whether the sticks move the robot in the driver's frame or in the robot's frame. Default: field. */ stickFrame: 'field' | 'robot';
   shooter: ShooterType;
+  /** Hood exit angle above horizontal, 20–80°. Default: 67°. */ hoodAngleDeg?: number;
+  /** Automatic distance aiming within the chosen travel range. Default: off, 55–66°, 120°/s. */
+  autoHood?: boolean; hoodMinDeg?: number; hoodMaxDeg?: number; hoodSlewDegPerSec?: number;
   /** An AUTO tree id, `default` for the tree that fits the robot's start position, or `none`. */ auto: string;
   /** The TELEOP plan: FLOWER work starts when this many seconds remain. 0 means TIPS only. */ flowerStartSec: number;
   /** The drive motor's free speed at the wheel, in rpm. Default: 600. */ driveRpm: number;
@@ -40,7 +44,7 @@ const IN = 0.0254, LB = 0.45359237, KEY = 'biobuzz.bots.v2';
 export const DEFAULT_SETUP = { driveRpm: 600, sizeIn: 15, massLb: 22 };
 /** The reference launcher's errors, from `DEFAULT_ROBOT.shooter.pollen`. The 1x, 3x, and 5x chips in the robot config multiply them. */
 export const REF_ERR = { errElevDeg: DEFAULT_ROBOT.shooter.pollen.elevationDeg.std, errAzimDeg: DEFAULT_ROBOT.shooter.pollen.yawStdDeg, errSpeed: DEFAULT_ROBOT.shooter.pollen.speed.std };
-export const defaultBot = (i: number): BotSetup => ({ plate: BOT_IDS[i], driver: 'planner', stickFrame: 'field', shooter: 'dual', auto: 'default', flowerStartSec: 0, dualIntake: false, dualShooter: false, defense: 'none', ...REF_ERR, intakeP: DEFAULT_ROBOT.intake.successP, ...DEFAULT_SETUP });
+export const defaultBot = (i: number): BotSetup => ({ plate: BOT_IDS[i], driver: 'planner', stickFrame: 'field', shooter: 'dual', hoodAngleDeg: 67, autoHood: false, hoodMinDeg: HOOD.defaultMinDeg, hoodMaxDeg: HOOD.defaultMaxDeg, hoodSlewDegPerSec: HOOD.slewDegPerSec, auto: 'default', flowerStartSec: 0, dualIntake: false, dualShooter: false, defense: 'none', ...REF_ERR, intakeP: DEFAULT_ROBOT.intake.successP, ...DEFAULT_SETUP });
 
 /**
  * The robot that the simulator opens with: the combined build that the experiments point to. It is a four-element
@@ -80,8 +84,10 @@ export function sanitize(b: BotSetup, i: number): BotSetup {
   const { spreadX: old, ...rest } = b as BotSetup & { spreadX?: number }; b = rest;
   if (old) b = { ...b, errElevDeg: REF_ERR.errElevDeg * old, errAzimDeg: REF_ERR.errAzimDeg * old, errSpeed: REF_ERR.errSpeed * old };
   const num = (v: number, lo: number, hi: number, d: number) => (Number.isFinite(v) ? Math.min(hi, Math.max(lo, v)) : d);
-  return { ...b, auto: RENAMED[b.auto] ?? b.auto, plate: (b.plate || BOT_IDS[i]).trim().slice(0, 6) || BOT_IDS[i], driver: i < 2 ? b.driver : 'planner', driveRpm: Math.round(num(b.driveRpm, 100, 1200, DEFAULT_SETUP.driveRpm)), sizeIn: Math.round(num(b.sizeIn, 10, 18, DEFAULT_SETUP.sizeIn) * 10) / 10, massLb: Math.round(num(b.massLb, 10, 42, DEFAULT_SETUP.massLb) * 10) / 10,
+  const [hoodMinDeg, hoodMaxDeg] = hoodLimits(b.hoodMinDeg, b.hoodMaxDeg);
+  return { ...b, autoHood: !!b.autoHood, hoodMinDeg, hoodMaxDeg, hoodSlewDegPerSec: num(b.hoodSlewDegPerSec ?? HOOD.slewDegPerSec, 1, 3600, HOOD.slewDegPerSec), auto: RENAMED[b.auto] ?? b.auto, plate: (b.plate || BOT_IDS[i]).trim().slice(0, 6) || BOT_IDS[i], driver: i < 2 ? b.driver : 'planner', driveRpm: Math.round(num(b.driveRpm, 100, 1200, DEFAULT_SETUP.driveRpm)), sizeIn: Math.round(num(b.sizeIn, 10, 18, DEFAULT_SETUP.sizeIn) * 10) / 10, massLb: Math.round(num(b.massLb, 10, 42, DEFAULT_SETUP.massLb) * 10) / 10,
     errElevDeg: Math.round(num(b.errElevDeg, 0, 15, REF_ERR.errElevDeg) * 100) / 100, errAzimDeg: Math.round(num(b.errAzimDeg, 0, 15, REF_ERR.errAzimDeg) * 100) / 100, errSpeed: Math.round(num(b.errSpeed, 0, 1.5, REF_ERR.errSpeed) * 1000) / 1000,
+    hoodAngleDeg: num(b.hoodAngleDeg ?? 67, 20, 80, 67),
     intakeP: Math.round(num(b.intakeP, 0.2, 1, DEFAULT_ROBOT.intake.successP) * 100) / 100,
     turretRangeDeg: Math.round(num(b.turretRangeDeg ?? 360, 30, 360, 360)), turretSlewDegPerSec: b.turretSlewDegPerSec && b.turretSlewDegPerSec > 0 ? Math.round(num(b.turretSlewDegPerSec, 10, 3600, 360)) : null };
 }
@@ -94,7 +100,7 @@ export function assignDriver(bots: BotSetup[], i: number, driver: DriverKind) {
 
 /** Builds the simulator's robot configuration from a setup. */
 export function robotConfig(b: BotSetup): RobotConfig {
-  const c = structuredClone(DEFAULT_ROBOT); c.shooter.type = b.shooter; setDriveRpm(c, b.driveRpm); setSquareSize(c, b.sizeIn * IN); setMass(c, b.massLb * LB); c.intake.dualSided = !!b.dualIntake; c.shooter.dualSided = !!b.dualShooter; c.shooter.turret = !!b.turret; c.shooter.turretRangeDeg = b.turretRangeDeg ?? 360; c.shooter.turretSlewDegPerSec = b.turretSlewDegPerSec ?? Infinity;
+  const c = structuredClone(DEFAULT_ROBOT); c.shooter.type = b.shooter; c.shooter.hoodAngleDeg = b.hoodAngleDeg ?? 67; c.shooter.autoHood = !!b.autoHood; [c.shooter.hoodMinDeg, c.shooter.hoodMaxDeg] = hoodLimits(b.hoodMinDeg, b.hoodMaxDeg); c.shooter.hoodSlewDegPerSec = b.hoodSlewDegPerSec ?? HOOD.slewDegPerSec; setDriveRpm(c, b.driveRpm); setSquareSize(c, b.sizeIn * IN); setMass(c, b.massLb * LB); c.intake.dualSided = !!b.dualIntake; c.shooter.dualSided = !!b.dualShooter; c.shooter.turret = !!b.turret; c.shooter.turretRangeDeg = b.turretRangeDeg ?? 360; c.shooter.turretSlewDegPerSec = b.turretSlewDegPerSec ?? Infinity;
   for (const lp of [c.shooter.pollen, c.shooter.nectar]) { lp.elevationDeg.std *= b.errElevDeg / REF_ERR.errElevDeg; lp.yawStdDeg *= b.errAzimDeg / REF_ERR.errAzimDeg; lp.speed.std *= b.errSpeed / REF_ERR.errSpeed; }
   c.intake.successP = b.intakeP;
   return c;
@@ -106,6 +112,7 @@ function phrases(b: BotSetup, units: Units) {
   const errored = b.errElevDeg !== REF_ERR.errElevDeg || b.errAzimDeg !== REF_ERR.errAzimDeg || b.errSpeed !== REF_ERR.errSpeed;
   return {
     driver: b.driver === 'planner' ? 'Planner' : `Controller ${b.driver === 'pad1' ? 1 : 2}, ${b.stickFrame}-centric`,
+    hood: b.autoHood ? `auto hood ${b.hoodMinDeg ?? HOOD.defaultMinDeg}–${b.hoodMaxDeg ?? HOOD.defaultMaxDeg}°, ${b.hoodSlewDegPerSec ?? HOOD.slewDegPerSec}°/s` : `hood ${b.hoodAngleDeg ?? 67}°`,
     shooter: b.shooter, auto: `AUTO ${b.auto.replace(/[_-]/g, ' ')}`, teleop: b.flowerStartSec ? `FLOWERS from ${b.flowerStartSec} s` : 'tips only',
     rpm: `${b.driveRpm} rpm`, size: fmtSize(b.sizeIn, units), mass: fmtMass(b.massLb, units), intake: b.dualIntake ? 'dual intake' : '',
     ends: b.turret ? `turret${turret}` : b.dualShooter ? 'launches from both ends' : '', defense: b.defense !== 'none' ? `${b.defense} defense` : '',
@@ -117,7 +124,7 @@ function phrases(b: BotSetup, units: Units) {
 /** Describes a setup in one line, for tooltips and the trace. The trace always uses metric units. */
 export function describe(b: BotSetup, units: Units = 'metric'): string {
   const p = phrases(b, units);
-  return [p.driver, p.shooter, p.auto, p.teleop, p.rpm, p.size, p.mass, p.intake, p.ends, p.defense, p.error, p.intakeP].filter(Boolean).join(' · ');
+  return [p.driver, p.shooter, p.auto, p.teleop, p.rpm, p.size, p.mass, p.intake, p.ends, p.hood, p.defense, p.error, p.intakeP].filter(Boolean).join(' · ');
 }
 
 const SHOOTER_NAME: Record<ShooterType, string> = { catapult: 'Catapult', fifo: 'Single shooter, FIFO', dual: 'Dual shooter' };
@@ -127,5 +134,5 @@ const SHOOTER_NAME: Record<ShooterType, string> = { catapult: 'Catapult', fifo: 
  */
 export function describeLines(b: BotSetup, units: Units = 'metric'): string[] {
   const p = phrases(b, units);
-  return [[p.driver, p.defense], [p.auto, p.teleop], [SHOOTER_NAME[b.shooter], p.ends, p.intake], [p.rpm, p.size, p.mass], [p.error, p.intakeP]].map(line => line.filter(Boolean).join(' · ')).filter(Boolean);
+  return [[p.driver, p.defense], [p.auto, p.teleop], [SHOOTER_NAME[b.shooter], p.ends, p.hood, p.intake], [p.rpm, p.size, p.mass], [p.error, p.intakeP]].map(line => line.filter(Boolean).join(' · ')).filter(Boolean);
 }

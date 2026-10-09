@@ -4,6 +4,7 @@ import { BALL, DEFAULT_ROBOT, FIELD, HIVE, MATCH, POINTS, RP, TIP_LOAD, type Lau
 import { mecanumForces, type DriveCommand } from './drivetrain';
 import { GROUP, Hive, groups, type Alliance } from './hive';
 import { Rng } from './rng';
+import { HOOD, hoodLimits, solveHood } from './hood';
 
 type R = typeof RAPIER_NS;
 export type BallKind = 'pollen' | 'nectar_red' | 'nectar_blue';
@@ -63,6 +64,8 @@ export interface RobotState {
   shotReadyAt: { nectar: number; pollen: number }; flowerReadyAt: number; lastForward: number; autoLeave: boolean; autoPark: boolean;
   /** A limited turret's angle from the shooter's mount direction, in radians, or NaN before its first step. */
   turretAngle: number;
+  /** Actual hood exit angle, target, and next distance-solver update. Degrees; independent per robot. */
+  hoodAngleDeg: number; hoodTargetDeg: number; hoodSolveAt: number; hoodKind: 'pollen' | 'nectar' | null;
   /** The drive command of the last step, for the referee: what the robot was trying to do. */
   lastCmd: DriveCommand;
 }
@@ -257,7 +260,7 @@ export class Sim {
       .setCollisionGroups(groups(GROUP.robot, GROUP.struct | GROUP.ball | GROUP.robot)), body);
     // G304.G: four pre-loaded POLLEN.
     return { alliance, slot, intent: '', plan: { phase: 'other', side: null, load: 0, claims: [], goal: null, zone: null }, cfg: c, body, carried: ['pollen', 'pollen', 'pollen', 'pollen'], telemetry: { busVoltage: 12.8, speed: 0 }, placing: null,
-      shotReadyAt: { nectar: 0, pollen: 0 }, flowerReadyAt: 0, lastForward: 0, autoLeave: false, autoPark: false, turretAngle: Number.NaN, lastCmd: { forward: 0, strafeRight: 0, turnRight: 0 } };
+      shotReadyAt: { nectar: 0, pollen: 0 }, flowerReadyAt: 0, lastForward: 0, autoLeave: false, autoPark: false, turretAngle: Number.NaN, hoodAngleDeg: this.initialHood(c), hoodTargetDeg: this.initialHood(c), hoodSolveAt: 0, hoodKind: null, lastCmd: { forward: 0, strafeRight: 0, turnRight: 0 } };
   }
 
   spawn(kind: BallKind, x: number, y: number, z: number, vel?: { x: number; y: number; z: number }, spin?: { x: number; y: number; z: number }): Ball {
@@ -343,7 +346,7 @@ export class Sim {
       if (this.hives[a].pollTip()) { this.say(`${a.toUpperCase()} HIVE TIP (${this.hives[a].tips})`); this.owed[a].push({ at: this.simTime + 2 }); }
     }
     this.humanPlayers();
-    for (const r of per) { r.v.aimTurret(); r.v.intake(r.inp.intake ?? 'all'); if (r.active) { r.v.shoot(r.inp); r.v.place(r.inp); } }
+    for (const r of per) { r.v.aimTurret(); r.v.aimHood(); r.v.intake(r.inp.intake ?? 'all'); if (r.active) { r.v.shoot(r.inp); r.v.place(r.inp); } }
     this.housekeeping(); this.touch();
   }
 
@@ -474,9 +477,61 @@ export class Sim {
     return (pose?.heading ?? this.heading) + (this.launchesRear(pose) ? Math.PI : 0);
   }
 
+  /** The hood controls exit elevation; its travel limits are a simulator assumption. */
+  private initialHood(c: RobotConfig): number {
+    const angle = Number.isFinite(c.shooter.hoodAngleDeg) ? c.shooter.hoodAngleDeg! : c.shooter.pollen.elevationDeg.mean;
+    const [min, max] = c.shooter.autoHood ? hoodLimits(c.shooter.hoodMinDeg, c.shooter.hoodMaxDeg) : [HOOD.minDeg, HOOD.maxDeg];
+    return Math.max(min, Math.min(max, angle));
+  }
+
+  /** The first ball the mechanism will launch. Dual shooters prefer POLLEN; catapults share one hood. */
+  private hoodBall(): 'pollen' | 'nectar' {
+    return (this.cfg.shooter.type === 'dual' && this.carried.includes('pollen')) || this.carried[0] === 'pollen' || !this.carried.length ? 'pollen' : 'nectar';
+  }
+
+  /** Computes a stationary shot angle to the mouth now, or at a hypothetical launch pose. */
+  hoodTarget(kind: 'pollen' | 'nectar', pose?: { x: number; z: number; heading: number }): number {
+    const lp = this.cfg.shooter[kind], aim = this.launchAim(pose), base = pose ?? this.robot.translation(), mouth = this.hives[this.alliance].mouthCenter();
+    const x = base.x + Math.cos(aim) * lp.offset[0], z = base.z - Math.sin(aim) * lp.offset[0];
+    const radius = kind === 'pollen' ? FIELD.pollenRadius : FIELD.nectarRadius, mass = kind === 'pollen' ? BALL.pollenMass : BALL.nectarMass;
+    const drag = 0.5 * BALL.airDensity * Math.PI * radius * radius * BALL.dragCd / mass;
+    const [min, max] = hoodLimits(this.cfg.shooter.hoodMinDeg, this.cfg.shooter.hoodMaxDeg);
+    return solveHood(Math.hypot(mouth.x - x, mouth.z - z), mouth.y, 0.02 + lp.offset[2], lp.speed.mean, drag, min, max, this.cfg.shooter.hoodAngleDeg ?? 67);
+  }
+
+  private aimHood() {
+    if (!this.cfg.shooter.autoHood) return;
+    const st = this.robots[this.me], kind = this.hoodBall();
+    if (this.simTime >= st.hoodSolveAt || st.hoodKind !== kind) {
+      st.hoodTargetDeg = this.hoodTarget(kind); st.hoodKind = kind; st.hoodSolveAt = this.simTime + HOOD.solvePeriodSec;
+    }
+    const speed = this.cfg.shooter.hoodSlewDegPerSec ?? HOOD.slewDegPerSec;
+    const step = (Number.isFinite(speed) && speed > 0 ? speed : HOOD.slewDegPerSec) * DT;
+    st.hoodAngleDeg += Math.max(-step, Math.min(step, st.hoodTargetDeg - st.hoodAngleDeg));
+  }
+
+  get hoodAngleDeg(): number { return this.cfg.shooter.autoHood ? this.robots[this.me].hoodAngleDeg : this.hoodElevation(this.cfg.shooter[this.hoodBall()]); }
+
+  hoodReady(): boolean {
+    if (!this.cfg.shooter.autoHood) return true;
+    const st = this.robots[this.me];
+    return st.hoodKind === this.hoodBall() && Math.abs(st.hoodAngleDeg - st.hoodTargetDeg) <= HOOD.toleranceDeg;
+  }
+
+  /** AUTO and the physics firing gate wait for the hood, chassis settling, and a scoring preview. */
+  autoHoodReady(): boolean {
+    return !this.cfg.shooter.autoHood || (this.hoodReady() && this.telemetry.speed < 0.2 && Math.abs(this.robot.angvel().y) < 0.3 && this.previewShot(this.hoodBall()).scores);
+  }
+
+  private hoodElevation(lp: LaunchParams): number {
+    if (this.cfg.shooter.autoHood) return this.robots[this.me].hoodAngleDeg;
+    const angle = this.cfg.shooter.hoodAngleDeg;
+    return angle !== undefined && Number.isFinite(angle) ? Math.max(20, Math.min(80, angle)) : lp.elevationDeg.mean;
+  }
+
   private launch(kind: BallKind, lateral = 0) {
     const lp: LaunchParams = kind === 'pollen' ? this.cfg.shooter.pollen : this.cfg.shooter.nectar;
-    const el = (this.rng.gauss(lp.elevationDeg.mean, lp.elevationDeg.std) * Math.PI) / 180;
+    const el = (this.rng.gauss(this.hoodElevation(lp), lp.elevationDeg.std) * Math.PI) / 180;
     const yaw = (this.rng.gauss(0, lp.yawStdDeg) * Math.PI) / 180, sp = this.rng.gauss(lp.speed.mean, lp.speed.std);
     const spin = (this.rng.gauss(lp.backspinRpm.mean, lp.backspinRpm.std) * 2 * Math.PI) / 60;
     if (this.cfg.shooter.turret) {
@@ -500,7 +555,7 @@ export class Sim {
 
   private shoot(inp: Inputs) {
     const s = this.cfg.shooter, any = inp.shootNectar || inp.shootPollen;
-    if (!any || this.carried.length === 0 || this.placing) return;
+    if (!any || this.carried.length === 0 || this.placing || !this.autoHoodReady()) return;
     const take = (pred: (k: BallKind) => boolean) => { const i = this.carried.findIndex(pred); return i < 0 ? null : this.carried.splice(i, 1)[0]; };
     if (s.type === 'catapult') {
       if (this.simTime < this.shotReadyAt.pollen) return;
@@ -631,7 +686,7 @@ export class Sim {
   /** Predicts the mean shot path for the next ball, for the aiming overlay and fire control. Points are world coordinates. */
   previewShot(kind: 'pollen' | 'nectar', pose?: { x: number; z: number; heading: number }): { points: number[][]; scores: boolean } {
     const lp = kind === 'pollen' ? this.cfg.shooter.pollen : this.cfg.shooter.nectar, r = kind === 'pollen' ? FIELD.pollenRadius : FIELD.nectarRadius;
-    const m = kind === 'pollen' ? BALL.pollenMass : BALL.nectarMass, el = (lp.elevationDeg.mean * Math.PI) / 180, speed = lp.speed.mean;
+    const m = kind === 'pollen' ? BALL.pollenMass : BALL.nectarMass, el = ((this.cfg.shooter.autoHood && pose ? this.hoodTarget(kind, pose) : this.hoodElevation(lp)) * Math.PI) / 180, speed = lp.speed.mean;
     // The launch direction is the robot heading, or the opposite direction for a rear-facing shooter, or a turret's aim.
     // A pose is a hypothetical spot, where a turret would have had time to aim. Without one, a limited turret aims where it points now.
     const th = this.launchAim(pose), base = pose ?? { x: this.robot.translation().x, z: this.robot.translation().z };

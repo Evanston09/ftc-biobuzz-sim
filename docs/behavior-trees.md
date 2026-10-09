@@ -203,6 +203,12 @@ can't do better. The TELEOP planner's launch spot has no heading for a turret, s
 The AUTO trees' launch poses keep their headings. With the turret on all four robots, `e79-turret-all` is +39.4 ±
 13.6 combined points against `e77-wait-until`.
 
+Automatic hood aiming is optional (`autoHood`, `hoodMinDeg`, `hoodMaxDeg`, `hoodSlewDegPerSec`).
+The shooter subsystem solves a bounded elevation to the raised CELL and moves the hood at its configured rate.
+AUTO's `bots.me.shooter.aimed` also waits for hood settling, a stationary chassis, and a scoring preview;
+`shooter.shoot` yields while that condition is false. TELEOP's `Shooter.canShoot` checks hood readiness before
+allowing the launch. The behavior trees keep their existing shooting leaves; they do not command servo angles.
+
 `canShoot` is built for TELEOP, as `Shooter.canShoot` in `src/auto/shooter.ts`, and the planner asks it before each
 launch: the robot must be at its launch spot and still, and the mean shot preview must enter the CELL. Two turret
 experiments lost points and were removed:

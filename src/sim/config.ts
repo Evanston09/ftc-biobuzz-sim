@@ -106,7 +106,15 @@ export interface RobotConfig {
    * `turretSlewDegPerSec` is its top turn rate. Default: Infinity. A limited turret turns toward the mouth on every
    * step, from the start of the MATCH, and launches where it points, aimed or not.
    */
-  shooter: { type: ShooterType; facing: 'front' | 'rear'; cycleSec: number; pollen: LaunchParams; nectar: LaunchParams; dualSided?: boolean; turret?: boolean; turretRangeDeg?: number; turretSlewDegPerSec?: number };
+  shooter: {
+    type: ShooterType; facing: 'front' | 'rear'; cycleSec: number;
+    pollen: LaunchParams; nectar: LaunchParams;
+    /** Fixed / starting exit angle above horizontal. Omitted uses each ball's reference elevation. */
+    hoodAngleDeg?: number;
+    /** Automatic distance aiming; limits (20–80°) and slew speed are simulator design assumptions. */
+    autoHood?: boolean; hoodMinDeg?: number; hoodMaxDeg?: number; hoodSlewDegPerSec?: number;
+    dualSided?: boolean; turret?: boolean; turretRangeDeg?: number; turretSlewDegPerSec?: number;
+  };
   place: { range: number; maxBearingDeg: number; durationSec: number; successP: number };
   /**
    * The AprilTag camera. It faces the same side as the shooter and looks up at the underside of the raised CELL.

@@ -1,0 +1,681 @@
+{
+  "tag": "hood-refine-20261008",
+  "seeds": 8,
+  "seedFormula": "1001 + 37*k",
+  "score": "combined red + blue full-match points",
+  "setup": {
+    "plate": "R0",
+    "driver": "planner",
+    "stickFrame": "field",
+    "shooter": "dual",
+    "hoodAngleDeg": 67,
+    "autoHood": false,
+    "hoodMinDeg": 55,
+    "hoodMaxDeg": 75,
+    "hoodSlewDegPerSec": 120,
+    "auto": "default",
+    "flowerStartSec": 0,
+    "dualIntake": false,
+    "dualShooter": false,
+    "defense": "none",
+    "errElevDeg": 1,
+    "errAzimDeg": 1.2,
+    "errSpeed": 0.08,
+    "intakeP": 0.95,
+    "driveRpm": 600,
+    "sizeIn": 15,
+    "massLb": 22,
+    "facing": "rear",
+    "turret": false
+  },
+  "rows": [
+    {
+      "range": {
+        "id": "20-65",
+        "angle": 67,
+        "min": 20,
+        "max": 65,
+        "auto": true
+      },
+      "result": {
+        "at": "2026-10-09T01:48:41.832Z",
+        "label": "hood-refine-20261008-20-65",
+        "n": 8,
+        "combined": 797.4,
+        "se": 17.1,
+        "red": 392.3,
+        "blue": 405.1,
+        "margin": -12.9,
+        "marginSe": 11.6,
+        "foulPointsTo": {
+          "red": 0,
+          "blue": 0
+        },
+        "tips": 36.8,
+        "auto": 126.4,
+        "park": 18.1,
+        "stallsPerRobot": 3.1,
+        "launchedPerRobot": 61.9,
+        "wasteSecPerRobot": {
+          "collect": 52.4,
+          "toLaunch": 37.1,
+          "settle": 14.1,
+          "waitCell": 2.5,
+          "aim": 6.7,
+          "shoot": 0.2,
+          "recover": 1.9,
+          "yield": 0.5,
+          "idle": 0.2,
+          "flower": 0,
+          "park": 4.4
+        },
+        "perSeed": [
+          735,
+          821,
+          788,
+          750,
+          837,
+          848,
+          748,
+          852
+        ],
+        "perSeedRed": [
+          355,
+          391,
+          406,
+          354,
+          407,
+          420,
+          355,
+          450
+        ],
+        "perSeedBlue": [
+          380,
+          430,
+          382,
+          396,
+          430,
+          428,
+          393,
+          402
+        ]
+      }
+    },
+    {
+      "range": {
+        "id": "45-65",
+        "angle": 67,
+        "min": 45,
+        "max": 65,
+        "auto": true
+      },
+      "result": {
+        "at": "2026-10-09T01:49:46.153Z",
+        "label": "hood-refine-20261008-45-65",
+        "n": 8,
+        "combined": 782.4,
+        "se": 14.2,
+        "red": 378.3,
+        "blue": 404.1,
+        "margin": -25.9,
+        "marginSe": 15.6,
+        "foulPointsTo": {
+          "red": 0,
+          "blue": 0
+        },
+        "tips": 36,
+        "auto": 128.3,
+        "park": 18.1,
+        "stallsPerRobot": 2.5,
+        "launchedPerRobot": 60.6,
+        "wasteSecPerRobot": {
+          "collect": 52.1,
+          "toLaunch": 37.2,
+          "settle": 14.6,
+          "waitCell": 2.7,
+          "aim": 6.6,
+          "shoot": 0.2,
+          "recover": 1.5,
+          "yield": 0.6,
+          "idle": 0.2,
+          "flower": 0,
+          "park": 4.5
+        },
+        "perSeed": [
+          764,
+          723,
+          839,
+          729,
+          799,
+          807,
+          800,
+          798
+        ],
+        "perSeedRed": [
+          373,
+          328,
+          390,
+          331,
+          391,
+          403,
+          379,
+          431
+        ],
+        "perSeedBlue": [
+          391,
+          395,
+          449,
+          398,
+          408,
+          404,
+          421,
+          367
+        ]
+      }
+    },
+    {
+      "range": {
+        "id": "55-66",
+        "angle": 67,
+        "min": 55,
+        "max": 66,
+        "auto": true
+      },
+      "result": {
+        "at": "2026-10-09T01:52:57.561Z",
+        "label": "hood-refine-20261008-55-66",
+        "n": 8,
+        "combined": 769.1,
+        "se": 10.1,
+        "red": 385.9,
+        "blue": 383.3,
+        "margin": 2.6,
+        "marginSe": 9.5,
+        "foulPointsTo": {
+          "red": 0,
+          "blue": 0
+        },
+        "tips": 35.4,
+        "auto": 124.5,
+        "park": 20,
+        "stallsPerRobot": 2.8,
+        "launchedPerRobot": 59.7,
+        "wasteSecPerRobot": {
+          "collect": 53.1,
+          "toLaunch": 37.5,
+          "settle": 14.1,
+          "waitCell": 2.3,
+          "aim": 5.8,
+          "shoot": 0.2,
+          "recover": 1.7,
+          "yield": 0.6,
+          "idle": 0.1,
+          "flower": 0,
+          "park": 4.6
+        },
+        "perSeed": [
+          727,
+          777,
+          797,
+          792,
+          778,
+          795,
+          728,
+          759
+        ],
+        "perSeedRed": [
+          355,
+          388,
+          429,
+          395,
+          391,
+          387,
+          372,
+          370
+        ],
+        "perSeedBlue": [
+          372,
+          389,
+          368,
+          397,
+          387,
+          408,
+          356,
+          389
+        ]
+      }
+    },
+    {
+      "range": {
+        "id": "60-66",
+        "angle": 67,
+        "min": 60,
+        "max": 66,
+        "auto": true
+      },
+      "result": {
+        "at": "2026-10-09T01:56:15.133Z",
+        "label": "hood-refine-20261008-60-66",
+        "n": 8,
+        "combined": 764.1,
+        "se": 11.6,
+        "red": 384.1,
+        "blue": 380,
+        "margin": 4.1,
+        "marginSe": 14.2,
+        "foulPointsTo": {
+          "red": 0,
+          "blue": 0
+        },
+        "tips": 35,
+        "auto": 134.5,
+        "park": 19.4,
+        "stallsPerRobot": 3.3,
+        "launchedPerRobot": 58.8,
+        "wasteSecPerRobot": {
+          "collect": 51.9,
+          "toLaunch": 38.4,
+          "settle": 14.5,
+          "waitCell": 2.2,
+          "aim": 5.8,
+          "shoot": 0.2,
+          "recover": 2,
+          "yield": 0.5,
+          "idle": 0.1,
+          "flower": 0,
+          "park": 4.5
+        },
+        "perSeed": [
+          725,
+          773,
+          795,
+          766,
+          706,
+          768,
+          779,
+          801
+        ],
+        "perSeedRed": [
+          336,
+          396,
+          389,
+          410,
+          357,
+          360,
+          412,
+          413
+        ],
+        "perSeedBlue": [
+          389,
+          377,
+          406,
+          356,
+          349,
+          408,
+          367,
+          388
+        ]
+      }
+    },
+    {
+      "range": {
+        "id": "55-67",
+        "angle": 67,
+        "min": 55,
+        "max": 67,
+        "auto": true
+      },
+      "result": {
+        "at": "2026-10-09T01:54:10.551Z",
+        "label": "hood-refine-20261008-55-67",
+        "n": 8,
+        "combined": 760.1,
+        "se": 21.4,
+        "red": 375.8,
+        "blue": 384.4,
+        "margin": -8.6,
+        "marginSe": 17.7,
+        "foulPointsTo": {
+          "red": 0,
+          "blue": 0
+        },
+        "tips": 34.9,
+        "auto": 139.5,
+        "park": 20,
+        "stallsPerRobot": 3.4,
+        "launchedPerRobot": 58.6,
+        "wasteSecPerRobot": {
+          "collect": 55.7,
+          "toLaunch": 34.3,
+          "settle": 14.2,
+          "waitCell": 2.3,
+          "aim": 5.8,
+          "shoot": 0.2,
+          "recover": 2.2,
+          "yield": 0.5,
+          "idle": 0.1,
+          "flower": 0,
+          "park": 4.7
+        },
+        "perSeed": [
+          727,
+          834,
+          762,
+          658,
+          725,
+          817,
+          820,
+          738
+        ],
+        "perSeedRed": [
+          356,
+          418,
+          411,
+          327,
+          369,
+          349,
+          409,
+          367
+        ],
+        "perSeedBlue": [
+          371,
+          416,
+          351,
+          331,
+          356,
+          468,
+          411,
+          371
+        ]
+      }
+    },
+    {
+      "range": {
+        "id": "60-64",
+        "angle": 67,
+        "min": 60,
+        "max": 64,
+        "auto": true
+      },
+      "result": {
+        "at": "2026-10-09T01:55:13.807Z",
+        "label": "hood-refine-20261008-60-64",
+        "n": 8,
+        "combined": 713.3,
+        "se": 17.6,
+        "red": 355,
+        "blue": 358.3,
+        "margin": -3.3,
+        "marginSe": 11.9,
+        "foulPointsTo": {
+          "red": 0,
+          "blue": 0
+        },
+        "tips": 32.5,
+        "auto": 74.5,
+        "park": 20,
+        "stallsPerRobot": 3,
+        "launchedPerRobot": 57.6,
+        "wasteSecPerRobot": {
+          "collect": 53.9,
+          "toLaunch": 36.4,
+          "settle": 13.8,
+          "waitCell": 2.1,
+          "aim": 6.2,
+          "shoot": 0.2,
+          "recover": 1.9,
+          "yield": 0.7,
+          "idle": 0.1,
+          "flower": 0,
+          "park": 4.7
+        },
+        "perSeed": [
+          638,
+          750,
+          702,
+          779,
+          676,
+          747,
+          667,
+          747
+        ],
+        "perSeedRed": [
+          332,
+          356,
+          374,
+          390,
+          348,
+          373,
+          318,
+          349
+        ],
+        "perSeedBlue": [
+          306,
+          394,
+          328,
+          389,
+          328,
+          374,
+          349,
+          398
+        ]
+      }
+    },
+    {
+      "range": {
+        "id": "55-64",
+        "angle": 67,
+        "min": 55,
+        "max": 64,
+        "auto": true
+      },
+      "result": {
+        "at": "2026-10-09T01:52:16.694Z",
+        "label": "hood-refine-20261008-55-64",
+        "n": 8,
+        "combined": 709.1,
+        "se": 9.3,
+        "red": 360.8,
+        "blue": 348.4,
+        "margin": 12.4,
+        "marginSe": 16,
+        "foulPointsTo": {
+          "red": 0,
+          "blue": 0
+        },
+        "tips": 32.1,
+        "auto": 74.5,
+        "park": 19.4,
+        "stallsPerRobot": 3.7,
+        "launchedPerRobot": 58,
+        "wasteSecPerRobot": {
+          "collect": 54.6,
+          "toLaunch": 35.7,
+          "settle": 13.9,
+          "waitCell": 2.1,
+          "aim": 6.2,
+          "shoot": 0.2,
+          "recover": 2.2,
+          "yield": 0.5,
+          "idle": 0.1,
+          "flower": 0,
+          "park": 4.4
+        },
+        "perSeed": [
+          684,
+          684,
+          731,
+          740,
+          705,
+          739,
+          675,
+          715
+        ],
+        "perSeedRed": [
+          344,
+          331,
+          377,
+          353,
+          389,
+          349,
+          376,
+          367
+        ],
+        "perSeedBlue": [
+          340,
+          353,
+          354,
+          387,
+          316,
+          390,
+          299,
+          348
+        ]
+      }
+    },
+    {
+      "range": {
+        "id": "50-63",
+        "angle": 67,
+        "min": 50,
+        "max": 63,
+        "auto": true
+      },
+      "result": {
+        "at": "2026-10-09T01:50:35.431Z",
+        "label": "hood-refine-20261008-50-63",
+        "n": 8,
+        "combined": 667.9,
+        "se": 11.4,
+        "red": 335.3,
+        "blue": 332.6,
+        "margin": 2.6,
+        "marginSe": 11,
+        "foulPointsTo": {
+          "red": 0,
+          "blue": 0
+        },
+        "tips": 30.3,
+        "auto": 72,
+        "park": 18.8,
+        "stallsPerRobot": 3.3,
+        "launchedPerRobot": 58.7,
+        "wasteSecPerRobot": {
+          "collect": 53.6,
+          "toLaunch": 35.4,
+          "settle": 14,
+          "waitCell": 2.4,
+          "aim": 6.6,
+          "shoot": 0.2,
+          "recover": 2.1,
+          "yield": 0.9,
+          "idle": 0.2,
+          "flower": 0,
+          "park": 4.6
+        },
+        "perSeed": [
+          671,
+          714,
+          631,
+          658,
+          695,
+          619,
+          665,
+          690
+        ],
+        "perSeedRed": [
+          302,
+          368,
+          318,
+          331,
+          348,
+          308,
+          350,
+          357
+        ],
+        "perSeedBlue": [
+          369,
+          346,
+          313,
+          327,
+          347,
+          311,
+          315,
+          333
+        ]
+      }
+    },
+    {
+      "range": {
+        "id": "55-63",
+        "angle": 67,
+        "min": 55,
+        "max": 63,
+        "auto": true
+      },
+      "result": {
+        "at": "2026-10-09T01:51:24.785Z",
+        "label": "hood-refine-20261008-55-63",
+        "n": 8,
+        "combined": 665,
+        "se": 9.5,
+        "red": 336.3,
+        "blue": 328.8,
+        "margin": 7.5,
+        "marginSe": 6.3,
+        "foulPointsTo": {
+          "red": 0,
+          "blue": 0
+        },
+        "tips": 30,
+        "auto": 72,
+        "park": 19.4,
+        "stallsPerRobot": 3.3,
+        "launchedPerRobot": 58.4,
+        "wasteSecPerRobot": {
+          "collect": 53.5,
+          "toLaunch": 35.5,
+          "settle": 13.9,
+          "waitCell": 2.5,
+          "aim": 6.5,
+          "shoot": 0.2,
+          "recover": 2,
+          "yield": 1,
+          "idle": 0.1,
+          "flower": 0,
+          "park": 4.8
+        },
+        "perSeed": [
+          671,
+          714,
+          631,
+          658,
+          648,
+          643,
+          665,
+          690
+        ],
+        "perSeedRed": [
+          333,
+          368,
+          318,
+          331,
+          318,
+          315,
+          350,
+          357
+        ],
+        "perSeedBlue": [
+          338,
+          346,
+          313,
+          327,
+          330,
+          328,
+          315,
+          333
+        ]
+      }
+    }
+  ]
+}

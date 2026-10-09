@@ -144,7 +144,7 @@
 </head>
 <body>
 <canvas id="c"></canvas>
-<div id="top" class="panel"><div class="teams red" id="tred"></div><div class="score red" id="sred">0</div><div class="mid"><div id="clock">2:00</div><div id="phase">Ready</div></div><div class="score blue" id="sblue">0</div><div class="teams blue" id="tblue"></div></div>
+<div id="top" class="panel"><div class="teams red" id="tred"></div><div class="score red" id="sred">0</div><div class="mid"><div id="clock">2:00</div><div id="phase">Ready</div><small id="hoodstatus" aria-live="polite"></small></div><div class="score blue" id="sblue">0</div><div class="teams blue" id="tblue"></div></div>
 <!-- The control bar. Its icons are Lucide icons, inlined. NOTICE.md has their licenses. -->
 <div id="dock">
 <div id="transport" class="panel">
@@ -194,6 +194,11 @@
   <label id="bcdriverow">Stick frame <select id="bcdrive"><option value="field">Field-centric</option><option value="robot">Robot-centric</option></select></label>
   <label>Shooter <select id="bcshooter"><option value="dual">Dual, by type</option><option value="fifo">Single, FIFO</option><option value="catapult">Catapult, all 4</option></select></label>
   <label>Intake <select id="bcintake"><option value="front">Front</option><option value="dual">Front and rear</option></select></label>
+  <label>Hood control <select id="bchoodmode"><option value="fixed">Fixed angle</option><option value="auto">Automatic by distance</option></select></label>
+  <label id="bchoodminrow">Hood minimum, ° <input id="bchoodmin" type="number" min="20" max="80" step="1"></label>
+  <label id="bchoodmaxrow">Hood maximum, ° <input id="bchoodmax" type="number" min="20" max="80" step="1"></label>
+  <label id="bchoodslewrow">Hood speed, °/s <input id="bchoodslew" type="number" min="1" max="3600" step="10"></label>
+  <label title="Sets the ball's exit angle above horizontal. Higher angles give a steeper arc. Changing this setting rebuilds the field.">Hood fixed / starting angle, ° <input id="bchood" type="number" min="20" max="80" step="1" value="67"></label>
   <label title="A turret aims each launch at the raised CELL, whatever the robot's heading, with full range of motion and an instant slew: an upper bound on what a turret can do.">Launches from <select id="bcends"><option value="one">The rear end</option><option value="both">Both ends</option><option value="turret">A turret</option></select></label>
   <label id="bcturretrow" title="The turret's range of motion, centered on the shooter's facing, and its top turn rate. An empty turn rate is an instant slew.">Turret range, ° <input id="bcturretrange" type="number" min="30" max="360" step="5"></label>
   <label id="bcslewrow">Turret turn rate, °/s <input id="bcturretslew" type="number" min="10" max="3600" step="10" placeholder="instant"></label>

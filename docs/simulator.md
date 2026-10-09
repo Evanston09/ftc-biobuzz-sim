@@ -38,7 +38,25 @@ default TELEOP tree in TELEOP. For how the trees work, see [Behavior-tree polici
   to 12 seconds, and reports `blocked` with a reason, for example "another robot is in the way". The TELEOP tree then
   picks something else. Inside 0.56 m, robots also push straight away from each other, so they don't wedge.
 - **Shooter.** The shooter has a fixed azimuth, with no turret. The default
-  shooter faces the rear of the robot, opposite the intake.
+  shooter faces the rear of the robot, opposite the intake. An adjustable hood sets the ball’s exit elevation
+  in **Hood angle** in the robot settings (20–80°, default 67°). These travel limits are a simulator assumption.
+  The preview and actual launches use the same hood setting; launch speed and shot variation stay unchanged.
+  **Hood control → Automatic by distance** enables automatic aiming within **Hood minimum / maximum**, at the
+  configured **Hood speed** (default 120°/s). The default automatic range is 55–66°, the highest mean
+  among the 24-seed finalists in `experiments/hood-results.md`; nearby ranges were statistically tied. The fixed angle becomes the starting angle and preferred trajectory
+  when two arcs are possible. The controller targets the raised mouth using gravity and drag, updates at 20 Hz,
+  and moves the hood every physics step. The displayed arc uses its actual angle; hypothetical launch poses use
+  the solved angle. Both AUTO's `shooter.shoot` behavior-tree leaf and TELEOP's shooter fire control wait for the
+  hood to settle and a scoring trajectory. An unreachable target holds fire. No turret is needed: the chassis
+  still aims horizontally. These limits, speed, update rate, and 0.25° readiness tolerance are simulation assumptions.
+  As with the existing preview, the angle solver omits backspin lift; actual flight includes it. A scoring preview
+  is a readiness check, not a guarantee, which is why range comparisons use completed match scores.
+  Changing settings rebuilds the FIELD. This models exit angle and actuator speed, rather than detailed hood geometry.
+
+  Run `node --import tsx scripts/hood-sweep.ts 8 6 my-hood-test` for a headless comparison of hood ranges.
+  Optional fourth argument selects ranges, e.g. `fixed:65,60:70,65:75,20:80`. All four robots use otherwise identical
+  baseline settings and fixed rear-facing shooters. Each range uses the same seeds and launch-error settings;
+  summaries and per-seed scores go to `experiments/policy-loop.jsonl`, and rankings to `experiments/<tag>.json`.
 - **Endgame by value.** When the drive time to the LOADING ZONE says that it is time to PARK, the TELEOP tree's endgame
   branch compares values, on every step: a launch that finishes a TIP is worth 20 points, a launch that doesn't is worth
   2 per element, and PARK is worth 5. In a qualification MATCH, a robot whose PARK the alliance still needs for the

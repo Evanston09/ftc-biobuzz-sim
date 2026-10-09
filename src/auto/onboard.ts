@@ -67,7 +67,7 @@ export const ONBOARD_SCHEMA = t.object({
     drive: t.object({ pose: POSE, speed: t.number('m/s') }),
     /** The transfer: the elements that the robot holds between the intake and the shooter. */
     transfer: t.object({ count: t.number(), capacity: t.number(), full: t.boolean() }),
-    /** The shooter. `aimed` is false while a turret still turns toward the raised CELL; a fixed shooter is always aimed. */
+    /** The shooter. `aimed` is false while a turret still turns toward the raised CELL; an automatic hood also waits for settling and a scoring preview. */
     shooter: t.object({ facing: t.enum('front', 'rear'), type: t.enum('catapult', 'fifo', 'dual'), aimed: t.boolean() }),
     /** The camera: `seesRaised(cell)` is true while it reads that CELL's AprilTags in the raised position. */
     vision: t.object({ seesRaised: t.fn([CELL], t.boolean()) }),
@@ -172,7 +172,7 @@ class OnboardAdapter implements OnboardEnv {
       drive,
       intake: { set: f => { out.inputs.intake = f; }, stop: () => { out.inputs.intake = this.intakeDefault; } },
       transfer: { count: s.carried.length, capacity: s.cfg.capacity, full: s.carried.length >= s.cfg.capacity },
-      shooter: { facing: s.cfg.shooter.facing, type: s.cfg.shooter.type, aimed: s.turretAimed(), fire: () => { out.inputs.shootPollen = true; out.inputs.shootNectar = true; } },
+      shooter: { facing: s.cfg.shooter.facing, type: s.cfg.shooter.type, aimed: s.turretAimed() && s.autoHoodReady(), fire: () => { out.inputs.shootPollen = true; out.inputs.shootNectar = true; } },
       // Rotated 180°, blue's rear CELL is where red's audience CELL is, so a tree's `rear` means red's rear.
       vision: { seesRaised: cell => seesRaisedCell(s, rotate ? (cell === 'rear' ? 'audience' : 'rear') : cell) },
     } };
@@ -308,7 +308,7 @@ const push = leaf({
 
 const shoot = leaf({
   id: 'shooter.shoot', version: 1, uses: ['shooter'],
-  doc: 'Launches open loop from where the robot stands until `count` elements are gone or the transfer is empty. With `cell`, it holds its fire until the camera sees that CELL raised. A turret holds its fire until it points at the raised CELL. A shooter that launches out of both ends uses the end that faces the robot\'s own HIVE.',
+  doc: 'Launches open loop from where the robot stands until `count` elements are gone or the transfer is empty. With `cell`, it holds its fire until the camera sees that CELL raised. An automatic hood holds fire until its angle settles and the mean shot enters the raised CELL. A turret holds its fire until it points at the raised CELL. A shooter that launches out of both ends uses the end that faces the robot\'s own HIVE.',
   params: {
     count: { type: t.number(), min: 1, doc: 'How many elements to launch.' },
     timeoutSec: { type: t.number('s'), min: 0, unit: 's', doc: 'The longest the step lasts, counting the wait for the CELL.' },

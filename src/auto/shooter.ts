@@ -17,6 +17,6 @@ export class Shooter {
    */
   canShoot(sim: Sim, kind: 'pollen' | 'nectar', requireCalm: boolean): boolean {
     const calm = !requireCalm || Math.abs(sim.hives[sim.alliance].body.angvel().x) < 0.35;
-    return calm && sim.telemetry.speed < 0.2 && Math.abs(sim.robot.angvel().y) < 0.3 && sim.previewShot(kind).scores;
+    return calm && sim.hoodReady() && sim.telemetry.speed < 0.2 && Math.abs(sim.robot.angvel().y) < 0.3 && sim.previewShot(kind).scores;
   }
 }
