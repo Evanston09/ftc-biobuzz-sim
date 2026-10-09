@@ -239,3 +239,26 @@ controller to choose a higher arc. Raising the minimum to 70° instead clamps mo
 is a demonstrated winner. Against `hood-fixed-reference-20261008`, their losses were 14.0 ± 11.4
 and 14.3 ± 6.7 respectively. Kept the reproduction tool and experiment records; no default-policy
 change. Commands, full results, and sample sizes are in [hood-calibrated-spread.md](hood-calibrated-spread.md).
+
+## Hood tipping-point review and fine sweep — October 8, 2026
+
+No implementation changes. Two independent review agents checked geometry/physics and paired statistics.
+Ran 13 maximum-angle configurations from 64–68° at eight paired seeds (104 matches), then caps 64, 65,
+65.5, and 65.75° at 24 seeds (96 matches); existing identical 24-seed 66/67° controls reproduced exactly
+on overlapping screen seeds. Integer gains were 43.02 ± 4.44 per alliance for 64→65° and 38.25 ± 5.68
+for 65→66°. Their difference is not statistically established. The quarter-degree screen's apparent
+breakthrough at 65.5→65.75° gained 30.0 per alliance, but pooled 24-seed validation reduced it to
+14.5 ± 6.27 and the additional 16 seeds alone to 6.75 ± 7.24. This does not establish a unique
+quarter-degree tipping point.
+
+24-seed mean alliance scores: 64° = 321.3, 65° = 364.3, 65.5° = 385.3, 65.75° = 399.8, 66° = 402.5,
+67° = 402.4. Mean gain largely levels off around 65.75–66°. Geometry has no special 66° branch;
+a deterministic POLLEN entry boundary is 65.774° at 0.70 m but 61.702° at 0.90 m. Nominal AUTO poses
+already have mean-entry margin at 65°. TIP scoring, retention, loading, and dependent AUTO steps
+can magnify smooth trajectory differences.
+The previously reviewed mixed-cargo calibration and preview-offset flaws remain unresolved; removing
+mean-preview gating did not change the eight-seed AUTO score difference. Kept experiment records and
+review findings, not a new default-policy choice or a real-robot threshold claim.
+
+See [hood-threshold-review.md](hood-threshold-review.md) for all scores, review findings, assumptions,
+selection-bias checks, and reproduction commands. Compared fine validation with `scripts/eval-compare.py`.
