@@ -1,0 +1,88 @@
+{
+  "trials": 288,
+  "retained": 285,
+  "entered": 286,
+  "rows": [
+    {
+      "kind": "pollen",
+      "distanceM": 0.7,
+      "angleDeg": 68.25,
+      "trials": 32,
+      "entered": 32,
+      "retained": 32,
+      "previewScores": 32
+    },
+    {
+      "kind": "pollen",
+      "distanceM": 0.8,
+      "angleDeg": 67,
+      "trials": 32,
+      "entered": 32,
+      "retained": 32,
+      "previewScores": 32
+    },
+    {
+      "kind": "pollen",
+      "distanceM": 0.9,
+      "angleDeg": 67,
+      "trials": 32,
+      "entered": 32,
+      "retained": 32,
+      "previewScores": 32
+    },
+    {
+      "kind": "pollen",
+      "distanceM": 1,
+      "angleDeg": 67,
+      "trials": 32,
+      "entered": 32,
+      "retained": 32,
+      "previewScores": 32
+    },
+    {
+      "kind": "pollen",
+      "distanceM": 1.1,
+      "angleDeg": 67,
+      "trials": 32,
+      "entered": 32,
+      "retained": 32,
+      "previewScores": 32
+    },
+    {
+      "kind": "nectar",
+      "distanceM": 0.7,
+      "angleDeg": 69.5,
+      "trials": 32,
+      "entered": 32,
+      "retained": 32,
+      "previewScores": 32
+    },
+    {
+      "kind": "nectar",
+      "distanceM": 0.8,
+      "angleDeg": 67.5,
+      "trials": 32,
+      "entered": 31,
+      "retained": 31,
+      "previewScores": 32
+    },
+    {
+      "kind": "nectar",
+      "distanceM": 0.9,
+      "angleDeg": 66.75,
+      "trials": 32,
+      "entered": 31,
+      "retained": 31,
+      "previewScores": 32
+    },
+    {
+      "kind": "nectar",
+      "distanceM": 1,
+      "angleDeg": 67,
+      "trials": 32,
+      "entered": 32,
+      "retained": 31,
+      "previewScores": 32
+    }
+  ]
+}

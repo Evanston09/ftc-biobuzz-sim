@@ -1,0 +1,50 @@
+{
+  "pollen": [
+    {
+      "distanceM": 0.65,
+      "angleDeg": 69.5
+    },
+    {
+      "distanceM": 0.75,
+      "angleDeg": 67
+    },
+    {
+      "distanceM": 0.85,
+      "angleDeg": 67
+    },
+    {
+      "distanceM": 0.95,
+      "angleDeg": 67
+    },
+    {
+      "distanceM": 1.05,
+      "angleDeg": 67
+    },
+    {
+      "distanceM": 1.15,
+      "angleDeg": 67
+    }
+  ],
+  "nectar": [
+    {
+      "distanceM": 0.65,
+      "angleDeg": 70.5
+    },
+    {
+      "distanceM": 0.75,
+      "angleDeg": 68.5
+    },
+    {
+      "distanceM": 0.85,
+      "angleDeg": 66.5
+    },
+    {
+      "distanceM": 0.95,
+      "angleDeg": 67
+    },
+    {
+      "distanceM": 1.05,
+      "angleDeg": 67
+    }
+  ]
+}

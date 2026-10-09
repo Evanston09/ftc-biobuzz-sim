@@ -4,7 +4,7 @@ import { BALL, DEFAULT_ROBOT, FIELD, HIVE, MATCH, POINTS, RP, TIP_LOAD, type Lau
 import { mecanumForces, type DriveCommand } from './drivetrain';
 import { GROUP, Hive, groups, type Alliance } from './hive';
 import { Rng } from './rng';
-import { HOOD, hoodLimits, solveHood } from './hood';
+import { HOOD, HOOD_CALIBRATION, hoodLimits, interpolateHood, solveHood } from './hood';
 
 type R = typeof RAPIER_NS;
 export type BallKind = 'pollen' | 'nectar_red' | 'nectar_blue';
@@ -489,13 +489,26 @@ export class Sim {
     return (this.cfg.shooter.type === 'dual' && this.carried.includes('pollen')) || this.carried[0] === 'pollen' || !this.carried.length ? 'pollen' : 'nectar';
   }
 
+  private hoodDistance(kind: 'pollen' | 'nectar', pose?: { x: number; z: number; heading: number }): number {
+    const lp = this.cfg.shooter[kind], aim = this.launchAim(pose), base = pose ?? this.robot.translation(), mouth = this.hives[this.alliance].mouthCenter();
+    return Math.hypot(mouth.x - base.x - Math.cos(aim) * lp.offset[0], mouth.z - base.z + Math.sin(aim) * lp.offset[0]);
+  }
+
+  private mappedHood(kind: 'pollen' | 'nectar', pose?: { x: number; z: number; heading: number }): number | null {
+    return interpolateHood((this.cfg.shooter.hoodCalibration ?? HOOD_CALIBRATION)[kind], this.hoodDistance(kind, pose));
+  }
+
   /** Computes a stationary shot angle to the mouth now, or at a hypothetical launch pose. */
   hoodTarget(kind: 'pollen' | 'nectar', pose?: { x: number; z: number; heading: number }): number {
+    const [min, max] = hoodLimits(this.cfg.shooter.hoodMinDeg, this.cfg.shooter.hoodMaxDeg);
+    if (this.cfg.shooter.hoodAimMode === 'calibrated') {
+      const angle = this.mappedHood(kind, pose) ?? this.cfg.shooter.hoodAngleDeg ?? 67;
+      return Math.max(min, Math.min(max, angle));
+    }
     const lp = this.cfg.shooter[kind], aim = this.launchAim(pose), base = pose ?? this.robot.translation(), mouth = this.hives[this.alliance].mouthCenter();
     const x = base.x + Math.cos(aim) * lp.offset[0], z = base.z - Math.sin(aim) * lp.offset[0];
     const radius = kind === 'pollen' ? FIELD.pollenRadius : FIELD.nectarRadius, mass = kind === 'pollen' ? BALL.pollenMass : BALL.nectarMass;
     const drag = 0.5 * BALL.airDensity * Math.PI * radius * radius * BALL.dragCd / mass;
-    const [min, max] = hoodLimits(this.cfg.shooter.hoodMinDeg, this.cfg.shooter.hoodMaxDeg);
     return solveHood(Math.hypot(mouth.x - x, mouth.z - z), mouth.y, 0.02 + lp.offset[2], lp.speed.mean, drag, min, max, this.cfg.shooter.hoodAngleDeg ?? 67);
   }
 
@@ -684,21 +697,31 @@ export class Sim {
   }
 
   /** Predicts the mean shot path for the next ball, for the aiming overlay and fire control. Points are world coordinates. */
-  previewShot(kind: 'pollen' | 'nectar', pose?: { x: number; z: number; heading: number }): { points: number[][]; scores: boolean } {
+  // referenceAngleDeg is only for preserving the planner's fixed-shooter standoff; it uses the legacy preview.
+  previewShot(kind: 'pollen' | 'nectar', pose?: { x: number; z: number; heading: number }, referenceAngleDeg?: number): { points: number[][]; scores: boolean } {
     const lp = kind === 'pollen' ? this.cfg.shooter.pollen : this.cfg.shooter.nectar, r = kind === 'pollen' ? FIELD.pollenRadius : FIELD.nectarRadius;
-    const m = kind === 'pollen' ? BALL.pollenMass : BALL.nectarMass, el = ((this.cfg.shooter.autoHood && pose ? this.hoodTarget(kind, pose) : this.hoodElevation(lp)) * Math.PI) / 180, speed = lp.speed.mean;
+    const calibrated = referenceAngleDeg === undefined && !!this.cfg.shooter.autoHood && this.cfg.shooter.hoodAimMode === 'calibrated';
+    // Tables were measured with the CELL at its stop. Outside their measured interval, hold fire.
+    if (calibrated && (this.mappedHood(kind, pose) === null || Math.abs(Math.abs(this.hives[this.alliance].phi) - HIVE.tiltLimit) > 0.03)) return { points: [], scores: false };
+    const m = kind === 'pollen' ? BALL.pollenMass : BALL.nectarMass, el = ((referenceAngleDeg ?? (this.cfg.shooter.autoHood && pose ? this.hoodTarget(kind, pose) : this.hoodElevation(lp))) * Math.PI) / 180, speed = lp.speed.mean;
     // The launch direction is the robot heading, or the opposite direction for a rear-facing shooter, or a turret's aim.
     // A pose is a hypothetical spot, where a turret would have had time to aim. Without one, a limited turret aims where it points now.
     const th = this.launchAim(pose), base = pose ?? { x: this.robot.translation().x, z: this.robot.translation().z };
     const o = { x: base.x + Math.cos(th) * lp.offset[0], z: base.z - Math.sin(th) * lp.offset[0] };
     const rv = pose ? { x: 0, y: 0, z: 0 } : this.robot.linvel();
     const p = [o.x, 0.02 + lp.offset[2], o.z], v = [rv.x + speed * Math.cos(el) * Math.cos(th), speed * Math.sin(el), rv.z - speed * Math.cos(el) * Math.sin(th)];
-    const k = (0.5 * BALL.airDensity * Math.PI * r * r * BALL.dragCd) / m, pts: number[][] = []; let scores = false; const h = 1 / 120;
-    for (let i = 0; i < 240 && p[1] > 0; i++) {
+    const k = (0.5 * BALL.airDensity * Math.PI * r * r * BALL.dragCd) / m, pts: number[][] = []; let scores = false; const h = calibrated ? DT : 1 / 120;
+    let spin = lp.backspinRpm.mean * 2 * Math.PI / 60;
+    const spinX = Math.sin(th), spinZ = Math.cos(th), liftBase = 0.5 * BALL.airDensity * Math.PI * r * r / m;
+    for (let i = 0; i < 2 / h && p[1] > 0; i++) {
       const sp = Math.hypot(v[0], v[1], v[2]);
       const q = [...p];
-      for (let a = 0; a < 3; a++) { v[a] += (-k * sp * v[a] - (a === 1 ? 9.81 : 0)) * h; p[a] += v[a] * h; }
-      if (i % 4 === 0) pts.push([...p]);
+      // Calibrated-mode preview uses the same backspin lift and damping as actual airborne balls.
+      const lift = calibrated && spin > 1 ? liftBase * sp * Math.min(0.35, r * spin / sp) : 0;
+      const acceleration = [-k * sp * v[0] - lift * spinZ * v[1], -k * sp * v[1] - 9.81 + lift * (spinZ * v[0] - spinX * v[2]), -k * sp * v[2] + lift * spinX * v[1]];
+      for (let a = 0; a < 3; a++) { v[a] = (v[a] + acceleration[a] * h) / (calibrated ? 1 + BALL.linearDamping * h : 1); p[a] += v[a] * h; }
+      if (calibrated) spin /= 1 + BALL.angularDamping * h;
+      if (i % (calibrated ? 8 : 4) === 0) pts.push([...p]);
       if (this.hives[this.alliance].entersMouth({ x: q[0], y: q[1], z: q[2] }, { x: p[0], y: p[1], z: p[2] }, r)) { scores = true; pts.push([...p]); break; }
     }
     return { points: pts, scores };

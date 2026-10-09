@@ -14,7 +14,7 @@ const ranges = selections.split(',').map(s => {
   return { id: `${a}-${b}`, angle: 67, min: +a, max: +b, auto: true };
 });
 for (const range of ranges) {
-  const bots = [0, 1, 2, 3].map(i => ({ ...defaultBot(i), autoHood: range.auto, hoodAngleDeg: range.angle, hoodMinDeg: range.min, hoodMaxDeg: range.max, hoodSlewDegPerSec: 120, turret: false, dualShooter: false, dualIntake: false }));
+  const bots = [0, 1, 2, 3].map(i => ({ ...defaultBot(i), autoHood: range.auto, hoodAimMode: 'ballistic', hoodAngleDeg: range.angle, hoodMinDeg: range.min, hoodMaxDeg: range.max, hoodSlewDegPerSec: 120, turret: false, dualShooter: false, dualIntake: false }));
   console.log(`\n${tag}: ${range.id}, ${n} paired seeds`);
   await new Promise<void>((resolve, reject) => {
     const child = spawn(process.execPath, ['--import', 'tsx', 'scripts/eval.ts', `${tag}-${range.id}`, n, parallel], {

@@ -1,0 +1,5147 @@
+{
+  "at": "2026-10-09T02:15:20.401Z",
+  "protocol": "Fixed rear shooter, defaultBot build, standard CELL load, stationary straight-in shots; retained after 1.8 s. Coarse 50\u201380\u00b0 at 1\u00b0 with 4 shots, refine \u00b12\u00b0 at 0.5\u00b0 with 16 shots. Same seeds per angle; validation uses different seeds and intervening distances.",
+  "rows": [
+    {
+      "distanceM": 0.25,
+      "kind": "nectar",
+      "best": {
+        "angleDeg": 67,
+        "trials": 16,
+        "entered": 0,
+        "retained": 0
+      },
+      "coarse": [
+        {
+          "angleDeg": 50,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 51,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 52,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 53,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 54,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 55,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 56,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 57,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 58,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 59,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 60,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 61,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 62,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 63,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 64,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 65,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 66,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 67,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 68,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 69,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 70,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 71,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 72,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 73,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 74,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 75,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 76,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 77,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 78,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 79,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 80,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        }
+      ],
+      "fine": [
+        {
+          "angleDeg": 65,
+          "trials": 16,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 65.5,
+          "trials": 16,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 66,
+          "trials": 16,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 66.5,
+          "trials": 16,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 67,
+          "trials": 16,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 67.5,
+          "trials": 16,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 68,
+          "trials": 16,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 68.5,
+          "trials": 16,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 69,
+          "trials": 16,
+          "entered": 0,
+          "retained": 0
+        }
+      ]
+    },
+    {
+      "distanceM": 0.35,
+      "kind": "nectar",
+      "best": {
+        "angleDeg": 80,
+        "trials": 16,
+        "entered": 8,
+        "retained": 8
+      },
+      "coarse": [
+        {
+          "angleDeg": 50,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 51,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 52,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 53,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 54,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 55,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 56,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 57,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 58,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 59,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 60,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 61,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 62,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 63,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 64,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 65,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 66,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 67,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 68,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 69,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 70,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 71,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 72,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 73,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 74,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 75,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 76,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 77,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 78,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 79,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 80,
+          "trials": 4,
+          "entered": 3,
+          "retained": 2
+        }
+      ],
+      "fine": [
+        {
+          "angleDeg": 78,
+          "trials": 16,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 78.5,
+          "trials": 16,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 79,
+          "trials": 16,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 79.5,
+          "trials": 16,
+          "entered": 7,
+          "retained": 7
+        },
+        {
+          "angleDeg": 80,
+          "trials": 16,
+          "entered": 8,
+          "retained": 8
+        }
+      ]
+    },
+    {
+      "distanceM": 0.45,
+      "kind": "nectar",
+      "best": {
+        "angleDeg": 77.5,
+        "trials": 16,
+        "entered": 13,
+        "retained": 13
+      },
+      "coarse": [
+        {
+          "angleDeg": 50,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 51,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 52,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 53,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 54,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 55,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 56,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 57,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 58,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 59,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 60,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 61,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 62,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 63,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 64,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 65,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 66,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 67,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 68,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 69,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 70,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 71,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 72,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 73,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 74,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 75,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 76,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 77,
+          "trials": 4,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 78,
+          "trials": 4,
+          "entered": 4,
+          "retained": 3
+        },
+        {
+          "angleDeg": 79,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 80,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        }
+      ],
+      "fine": [
+        {
+          "angleDeg": 77,
+          "trials": 16,
+          "entered": 12,
+          "retained": 12
+        },
+        {
+          "angleDeg": 77.5,
+          "trials": 16,
+          "entered": 13,
+          "retained": 13
+        },
+        {
+          "angleDeg": 78,
+          "trials": 16,
+          "entered": 11,
+          "retained": 11
+        },
+        {
+          "angleDeg": 78.5,
+          "trials": 16,
+          "entered": 11,
+          "retained": 10
+        },
+        {
+          "angleDeg": 79,
+          "trials": 16,
+          "entered": 13,
+          "retained": 13
+        },
+        {
+          "angleDeg": 79.5,
+          "trials": 16,
+          "entered": 12,
+          "retained": 10
+        },
+        {
+          "angleDeg": 80,
+          "trials": 16,
+          "entered": 13,
+          "retained": 13
+        }
+      ]
+    },
+    {
+      "distanceM": 0.55,
+      "kind": "nectar",
+      "best": {
+        "angleDeg": 73,
+        "trials": 16,
+        "entered": 14,
+        "retained": 14
+      },
+      "coarse": [
+        {
+          "angleDeg": 50,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 51,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 52,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 53,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 54,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 55,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 56,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 57,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 58,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 59,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 60,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 61,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 62,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 63,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 64,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 65,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 66,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 67,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 68,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 69,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 70,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 71,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 72,
+          "trials": 4,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 73,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 74,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 75,
+          "trials": 4,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 76,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 77,
+          "trials": 4,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 78,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 79,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 80,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        }
+      ],
+      "fine": [
+        {
+          "angleDeg": 71,
+          "trials": 16,
+          "entered": 7,
+          "retained": 7
+        },
+        {
+          "angleDeg": 71.5,
+          "trials": 16,
+          "entered": 9,
+          "retained": 9
+        },
+        {
+          "angleDeg": 72,
+          "trials": 16,
+          "entered": 10,
+          "retained": 10
+        },
+        {
+          "angleDeg": 72.5,
+          "trials": 16,
+          "entered": 12,
+          "retained": 12
+        },
+        {
+          "angleDeg": 73,
+          "trials": 16,
+          "entered": 14,
+          "retained": 14
+        },
+        {
+          "angleDeg": 73.5,
+          "trials": 16,
+          "entered": 14,
+          "retained": 14
+        },
+        {
+          "angleDeg": 74,
+          "trials": 16,
+          "entered": 14,
+          "retained": 14
+        },
+        {
+          "angleDeg": 74.5,
+          "trials": 16,
+          "entered": 14,
+          "retained": 14
+        },
+        {
+          "angleDeg": 75,
+          "trials": 16,
+          "entered": 13,
+          "retained": 13
+        }
+      ]
+    },
+    {
+      "distanceM": 0.65,
+      "kind": "nectar",
+      "best": {
+        "angleDeg": 70.5,
+        "trials": 16,
+        "entered": 16,
+        "retained": 16
+      },
+      "coarse": [
+        {
+          "angleDeg": 50,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 51,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 52,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 53,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 54,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 55,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 56,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 57,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 58,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 59,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 60,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 61,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 62,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 63,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 64,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 65,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 66,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 67,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 68,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 69,
+          "trials": 4,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 70,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 71,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 72,
+          "trials": 4,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 73,
+          "trials": 4,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 74,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 75,
+          "trials": 4,
+          "entered": 4,
+          "retained": 3
+        },
+        {
+          "angleDeg": 76,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 77,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 78,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 79,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 80,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        }
+      ],
+      "fine": [
+        {
+          "angleDeg": 68,
+          "trials": 16,
+          "entered": 8,
+          "retained": 8
+        },
+        {
+          "angleDeg": 68.5,
+          "trials": 16,
+          "entered": 10,
+          "retained": 10
+        },
+        {
+          "angleDeg": 69,
+          "trials": 16,
+          "entered": 12,
+          "retained": 12
+        },
+        {
+          "angleDeg": 69.5,
+          "trials": 16,
+          "entered": 14,
+          "retained": 14
+        },
+        {
+          "angleDeg": 70,
+          "trials": 16,
+          "entered": 15,
+          "retained": 15
+        },
+        {
+          "angleDeg": 70.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 71,
+          "trials": 16,
+          "entered": 15,
+          "retained": 14
+        },
+        {
+          "angleDeg": 71.5,
+          "trials": 16,
+          "entered": 15,
+          "retained": 15
+        },
+        {
+          "angleDeg": 72,
+          "trials": 16,
+          "entered": 15,
+          "retained": 15
+        }
+      ]
+    },
+    {
+      "distanceM": 0.75,
+      "kind": "nectar",
+      "best": {
+        "angleDeg": 68.5,
+        "trials": 16,
+        "entered": 16,
+        "retained": 16
+      },
+      "coarse": [
+        {
+          "angleDeg": 50,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 51,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 52,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 53,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 54,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 55,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 56,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 57,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 58,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 59,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 60,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 61,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 62,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 63,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 64,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 65,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 66,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 67,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 68,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 69,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 70,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 71,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 72,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 73,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 74,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 75,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 76,
+          "trials": 4,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 77,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 78,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 79,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 80,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        }
+      ],
+      "fine": [
+        {
+          "angleDeg": 65,
+          "trials": 16,
+          "entered": 8,
+          "retained": 8
+        },
+        {
+          "angleDeg": 65.5,
+          "trials": 16,
+          "entered": 10,
+          "retained": 10
+        },
+        {
+          "angleDeg": 66,
+          "trials": 16,
+          "entered": 10,
+          "retained": 10
+        },
+        {
+          "angleDeg": 66.5,
+          "trials": 16,
+          "entered": 13,
+          "retained": 13
+        },
+        {
+          "angleDeg": 67,
+          "trials": 16,
+          "entered": 15,
+          "retained": 15
+        },
+        {
+          "angleDeg": 67.5,
+          "trials": 16,
+          "entered": 15,
+          "retained": 15
+        },
+        {
+          "angleDeg": 68,
+          "trials": 16,
+          "entered": 15,
+          "retained": 15
+        },
+        {
+          "angleDeg": 68.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 69,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        }
+      ]
+    },
+    {
+      "distanceM": 0.85,
+      "kind": "nectar",
+      "best": {
+        "angleDeg": 66.5,
+        "trials": 16,
+        "entered": 16,
+        "retained": 16
+      },
+      "coarse": [
+        {
+          "angleDeg": 50,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 51,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 52,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 53,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 54,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 55,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 56,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 57,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 58,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 59,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 60,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 61,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 62,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 63,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 64,
+          "trials": 4,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 65,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 66,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 67,
+          "trials": 4,
+          "entered": 4,
+          "retained": 3
+        },
+        {
+          "angleDeg": 68,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 69,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 70,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 71,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 72,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 73,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 74,
+          "trials": 4,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 75,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 76,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 77,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 78,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 79,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 80,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        }
+      ],
+      "fine": [
+        {
+          "angleDeg": 64,
+          "trials": 16,
+          "entered": 13,
+          "retained": 13
+        },
+        {
+          "angleDeg": 64.5,
+          "trials": 16,
+          "entered": 14,
+          "retained": 14
+        },
+        {
+          "angleDeg": 65,
+          "trials": 16,
+          "entered": 14,
+          "retained": 14
+        },
+        {
+          "angleDeg": 65.5,
+          "trials": 16,
+          "entered": 15,
+          "retained": 15
+        },
+        {
+          "angleDeg": 66,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 66.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 67,
+          "trials": 16,
+          "entered": 15,
+          "retained": 15
+        },
+        {
+          "angleDeg": 67.5,
+          "trials": 16,
+          "entered": 15,
+          "retained": 15
+        },
+        {
+          "angleDeg": 68,
+          "trials": 16,
+          "entered": 15,
+          "retained": 15
+        }
+      ]
+    },
+    {
+      "distanceM": 0.95,
+      "kind": "nectar",
+      "best": {
+        "angleDeg": 67,
+        "trials": 16,
+        "entered": 16,
+        "retained": 16
+      },
+      "coarse": [
+        {
+          "angleDeg": 50,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 51,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 52,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 53,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 54,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 55,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 56,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 57,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 58,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 59,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 60,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 61,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 62,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 63,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 64,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 65,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 66,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 67,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 68,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 69,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 70,
+          "trials": 4,
+          "entered": 4,
+          "retained": 3
+        },
+        {
+          "angleDeg": 71,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 72,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 73,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 74,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 75,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 76,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 77,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 78,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 79,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 80,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        }
+      ],
+      "fine": [
+        {
+          "angleDeg": 65,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 65.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 66,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 66.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 67,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 67.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 68,
+          "trials": 16,
+          "entered": 15,
+          "retained": 15
+        },
+        {
+          "angleDeg": 68.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 69,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        }
+      ]
+    },
+    {
+      "distanceM": 1.05,
+      "kind": "nectar",
+      "best": {
+        "angleDeg": 67,
+        "trials": 16,
+        "entered": 16,
+        "retained": 16
+      },
+      "coarse": [
+        {
+          "angleDeg": 50,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 51,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 52,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 53,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 54,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 55,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 56,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 57,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 58,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 59,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 60,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 61,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 62,
+          "trials": 4,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 63,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 64,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 65,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 66,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 67,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 68,
+          "trials": 4,
+          "entered": 4,
+          "retained": 3
+        },
+        {
+          "angleDeg": 69,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 70,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 71,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 72,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 73,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 74,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 75,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 76,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 77,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 78,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 79,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 80,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        }
+      ],
+      "fine": [
+        {
+          "angleDeg": 65,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 65.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 66,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 66.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 67,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 67.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 68,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 68.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 15
+        },
+        {
+          "angleDeg": 69,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        }
+      ]
+    },
+    {
+      "distanceM": 1.15,
+      "kind": "nectar",
+      "best": {
+        "angleDeg": 66.5,
+        "trials": 16,
+        "entered": 15,
+        "retained": 15
+      },
+      "coarse": [
+        {
+          "angleDeg": 50,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 51,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 52,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 53,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 54,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 55,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 56,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 57,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 58,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 59,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 60,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 61,
+          "trials": 4,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 62,
+          "trials": 4,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 63,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 64,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 65,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 66,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 67,
+          "trials": 4,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 68,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 69,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 70,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 71,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 72,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 73,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 74,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 75,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 76,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 77,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 78,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 79,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 80,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        }
+      ],
+      "fine": [
+        {
+          "angleDeg": 64,
+          "trials": 16,
+          "entered": 15,
+          "retained": 15
+        },
+        {
+          "angleDeg": 64.5,
+          "trials": 16,
+          "entered": 15,
+          "retained": 15
+        },
+        {
+          "angleDeg": 65,
+          "trials": 16,
+          "entered": 15,
+          "retained": 15
+        },
+        {
+          "angleDeg": 65.5,
+          "trials": 16,
+          "entered": 15,
+          "retained": 15
+        },
+        {
+          "angleDeg": 66,
+          "trials": 16,
+          "entered": 15,
+          "retained": 15
+        },
+        {
+          "angleDeg": 66.5,
+          "trials": 16,
+          "entered": 15,
+          "retained": 15
+        },
+        {
+          "angleDeg": 67,
+          "trials": 16,
+          "entered": 14,
+          "retained": 14
+        },
+        {
+          "angleDeg": 67.5,
+          "trials": 16,
+          "entered": 15,
+          "retained": 15
+        },
+        {
+          "angleDeg": 68,
+          "trials": 16,
+          "entered": 11,
+          "retained": 10
+        }
+      ]
+    },
+    {
+      "distanceM": 0.25,
+      "kind": "pollen",
+      "best": {
+        "angleDeg": 67,
+        "trials": 16,
+        "entered": 0,
+        "retained": 0
+      },
+      "coarse": [
+        {
+          "angleDeg": 50,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 51,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 52,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 53,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 54,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 55,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 56,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 57,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 58,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 59,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 60,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 61,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 62,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 63,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 64,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 65,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 66,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 67,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 68,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 69,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 70,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 71,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 72,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 73,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 74,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 75,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 76,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 77,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 78,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 79,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 80,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        }
+      ],
+      "fine": [
+        {
+          "angleDeg": 65,
+          "trials": 16,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 65.5,
+          "trials": 16,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 66,
+          "trials": 16,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 66.5,
+          "trials": 16,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 67,
+          "trials": 16,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 67.5,
+          "trials": 16,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 68,
+          "trials": 16,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 68.5,
+          "trials": 16,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 69,
+          "trials": 16,
+          "entered": 0,
+          "retained": 0
+        }
+      ]
+    },
+    {
+      "distanceM": 0.35,
+      "kind": "pollen",
+      "best": {
+        "angleDeg": 80,
+        "trials": 16,
+        "entered": 9,
+        "retained": 9
+      },
+      "coarse": [
+        {
+          "angleDeg": 50,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 51,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 52,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 53,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 54,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 55,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 56,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 57,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 58,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 59,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 60,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 61,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 62,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 63,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 64,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 65,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 66,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 67,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 68,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 69,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 70,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 71,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 72,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 73,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 74,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 75,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 76,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 77,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 78,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 79,
+          "trials": 4,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 80,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        }
+      ],
+      "fine": [
+        {
+          "angleDeg": 78,
+          "trials": 16,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 78.5,
+          "trials": 16,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 79,
+          "trials": 16,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 79.5,
+          "trials": 16,
+          "entered": 5,
+          "retained": 5
+        },
+        {
+          "angleDeg": 80,
+          "trials": 16,
+          "entered": 9,
+          "retained": 9
+        }
+      ]
+    },
+    {
+      "distanceM": 0.45,
+      "kind": "pollen",
+      "best": {
+        "angleDeg": 76,
+        "trials": 16,
+        "entered": 13,
+        "retained": 13
+      },
+      "coarse": [
+        {
+          "angleDeg": 50,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 51,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 52,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 53,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 54,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 55,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 56,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 57,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 58,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 59,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 60,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 61,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 62,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 63,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 64,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 65,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 66,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 67,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 68,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 69,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 70,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 71,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 72,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 73,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 74,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 75,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 76,
+          "trials": 4,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 77,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 78,
+          "trials": 4,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 79,
+          "trials": 4,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 80,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        }
+      ],
+      "fine": [
+        {
+          "angleDeg": 75,
+          "trials": 16,
+          "entered": 7,
+          "retained": 7
+        },
+        {
+          "angleDeg": 75.5,
+          "trials": 16,
+          "entered": 9,
+          "retained": 9
+        },
+        {
+          "angleDeg": 76,
+          "trials": 16,
+          "entered": 13,
+          "retained": 13
+        },
+        {
+          "angleDeg": 76.5,
+          "trials": 16,
+          "entered": 11,
+          "retained": 11
+        },
+        {
+          "angleDeg": 77,
+          "trials": 16,
+          "entered": 9,
+          "retained": 9
+        },
+        {
+          "angleDeg": 77.5,
+          "trials": 16,
+          "entered": 8,
+          "retained": 8
+        },
+        {
+          "angleDeg": 78,
+          "trials": 16,
+          "entered": 11,
+          "retained": 11
+        },
+        {
+          "angleDeg": 78.5,
+          "trials": 16,
+          "entered": 10,
+          "retained": 10
+        },
+        {
+          "angleDeg": 79,
+          "trials": 16,
+          "entered": 9,
+          "retained": 9
+        }
+      ]
+    },
+    {
+      "distanceM": 0.55,
+      "kind": "pollen",
+      "best": {
+        "angleDeg": 72.5,
+        "trials": 16,
+        "entered": 15,
+        "retained": 15
+      },
+      "coarse": [
+        {
+          "angleDeg": 50,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 51,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 52,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 53,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 54,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 55,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 56,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 57,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 58,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 59,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 60,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 61,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 62,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 63,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 64,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 65,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 66,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 67,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 68,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 69,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 70,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 71,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 72,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 73,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 74,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 75,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 76,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 77,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 78,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 79,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 80,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        }
+      ],
+      "fine": [
+        {
+          "angleDeg": 70,
+          "trials": 16,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 70.5,
+          "trials": 16,
+          "entered": 7,
+          "retained": 7
+        },
+        {
+          "angleDeg": 71,
+          "trials": 16,
+          "entered": 10,
+          "retained": 10
+        },
+        {
+          "angleDeg": 71.5,
+          "trials": 16,
+          "entered": 11,
+          "retained": 11
+        },
+        {
+          "angleDeg": 72,
+          "trials": 16,
+          "entered": 14,
+          "retained": 14
+        },
+        {
+          "angleDeg": 72.5,
+          "trials": 16,
+          "entered": 15,
+          "retained": 15
+        },
+        {
+          "angleDeg": 73,
+          "trials": 16,
+          "entered": 15,
+          "retained": 15
+        },
+        {
+          "angleDeg": 73.5,
+          "trials": 16,
+          "entered": 14,
+          "retained": 14
+        },
+        {
+          "angleDeg": 74,
+          "trials": 16,
+          "entered": 13,
+          "retained": 13
+        }
+      ]
+    },
+    {
+      "distanceM": 0.65,
+      "kind": "pollen",
+      "best": {
+        "angleDeg": 69.5,
+        "trials": 16,
+        "entered": 16,
+        "retained": 16
+      },
+      "coarse": [
+        {
+          "angleDeg": 50,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 51,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 52,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 53,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 54,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 55,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 56,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 57,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 58,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 59,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 60,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 61,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 62,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 63,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 64,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 65,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 66,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 67,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 68,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 69,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 70,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 71,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 72,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 73,
+          "trials": 4,
+          "entered": 3,
+          "retained": 2
+        },
+        {
+          "angleDeg": 74,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 75,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 76,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 77,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 78,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 79,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 80,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        }
+      ],
+      "fine": [
+        {
+          "angleDeg": 67,
+          "trials": 16,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 67.5,
+          "trials": 16,
+          "entered": 8,
+          "retained": 8
+        },
+        {
+          "angleDeg": 68,
+          "trials": 16,
+          "entered": 10,
+          "retained": 10
+        },
+        {
+          "angleDeg": 68.5,
+          "trials": 16,
+          "entered": 14,
+          "retained": 14
+        },
+        {
+          "angleDeg": 69,
+          "trials": 16,
+          "entered": 15,
+          "retained": 15
+        },
+        {
+          "angleDeg": 69.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 70,
+          "trials": 16,
+          "entered": 16,
+          "retained": 15
+        },
+        {
+          "angleDeg": 70.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 71,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        }
+      ]
+    },
+    {
+      "distanceM": 0.75,
+      "kind": "pollen",
+      "best": {
+        "angleDeg": 67,
+        "trials": 16,
+        "entered": 16,
+        "retained": 16
+      },
+      "coarse": [
+        {
+          "angleDeg": 50,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 51,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 52,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 53,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 54,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 55,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 56,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 57,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 58,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 59,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 60,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 61,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 62,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 63,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 64,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 65,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 66,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 67,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 68,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 69,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 70,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 71,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 72,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 73,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 74,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 75,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 76,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 77,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 78,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 79,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 80,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        }
+      ],
+      "fine": [
+        {
+          "angleDeg": 65,
+          "trials": 16,
+          "entered": 10,
+          "retained": 10
+        },
+        {
+          "angleDeg": 65.5,
+          "trials": 16,
+          "entered": 12,
+          "retained": 12
+        },
+        {
+          "angleDeg": 66,
+          "trials": 16,
+          "entered": 14,
+          "retained": 14
+        },
+        {
+          "angleDeg": 66.5,
+          "trials": 16,
+          "entered": 15,
+          "retained": 15
+        },
+        {
+          "angleDeg": 67,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 67.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 68,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 68.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 69,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        }
+      ]
+    },
+    {
+      "distanceM": 0.85,
+      "kind": "pollen",
+      "best": {
+        "angleDeg": 67,
+        "trials": 16,
+        "entered": 16,
+        "retained": 16
+      },
+      "coarse": [
+        {
+          "angleDeg": 50,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 51,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 52,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 53,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 54,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 55,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 56,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 57,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 58,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 59,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 60,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 61,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 62,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 63,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 64,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 65,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 66,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 67,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 68,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 69,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 70,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 71,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 72,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 73,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 74,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 75,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 76,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 77,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 78,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 79,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 80,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        }
+      ],
+      "fine": [
+        {
+          "angleDeg": 65,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 65.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 66,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 66.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 67,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 67.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 68,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 68.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 69,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        }
+      ]
+    },
+    {
+      "distanceM": 0.95,
+      "kind": "pollen",
+      "best": {
+        "angleDeg": 67,
+        "trials": 16,
+        "entered": 16,
+        "retained": 16
+      },
+      "coarse": [
+        {
+          "angleDeg": 50,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 51,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 52,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 53,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 54,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 55,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 56,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 57,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 58,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 59,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 60,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 61,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 62,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 63,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 64,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 65,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 66,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 67,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 68,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 69,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 70,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 71,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 72,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 73,
+          "trials": 4,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 74,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 75,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 76,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 77,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 78,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 79,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 80,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        }
+      ],
+      "fine": [
+        {
+          "angleDeg": 65,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 65.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 66,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 66.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 67,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 67.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 68,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 68.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 69,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        }
+      ]
+    },
+    {
+      "distanceM": 1.05,
+      "kind": "pollen",
+      "best": {
+        "angleDeg": 67,
+        "trials": 16,
+        "entered": 16,
+        "retained": 16
+      },
+      "coarse": [
+        {
+          "angleDeg": 50,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 51,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 52,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 53,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 54,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 55,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 56,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 57,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 58,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 59,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 60,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 61,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 62,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 63,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 64,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 65,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 66,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 67,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 68,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 69,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 70,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 71,
+          "trials": 4,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 72,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 73,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 74,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 75,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 76,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 77,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 78,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 79,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 80,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        }
+      ],
+      "fine": [
+        {
+          "angleDeg": 65,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 65.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 66,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 66.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 67,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 67.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 68,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 68.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 69,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        }
+      ]
+    },
+    {
+      "distanceM": 1.15,
+      "kind": "pollen",
+      "best": {
+        "angleDeg": 67,
+        "trials": 16,
+        "entered": 16,
+        "retained": 16
+      },
+      "coarse": [
+        {
+          "angleDeg": 50,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 51,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 52,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 53,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 54,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 55,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 56,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 57,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 58,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 59,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 60,
+          "trials": 4,
+          "entered": 3,
+          "retained": 3
+        },
+        {
+          "angleDeg": 61,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 62,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 63,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 64,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 65,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 66,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 67,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 68,
+          "trials": 4,
+          "entered": 4,
+          "retained": 4
+        },
+        {
+          "angleDeg": 69,
+          "trials": 4,
+          "entered": 2,
+          "retained": 2
+        },
+        {
+          "angleDeg": 70,
+          "trials": 4,
+          "entered": 1,
+          "retained": 1
+        },
+        {
+          "angleDeg": 71,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 72,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 73,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 74,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 75,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 76,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 77,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 78,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 79,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        },
+        {
+          "angleDeg": 80,
+          "trials": 4,
+          "entered": 0,
+          "retained": 0
+        }
+      ],
+      "fine": [
+        {
+          "angleDeg": 65,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 65.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 66,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 66.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 67,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 67.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 68,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 68.5,
+          "trials": 16,
+          "entered": 16,
+          "retained": 16
+        },
+        {
+          "angleDeg": 69,
+          "trials": 16,
+          "entered": 11,
+          "retained": 11
+        }
+      ]
+    }
+  ],
+  "table": {
+    "pollen": [
+      {
+        "distanceM": 0.65,
+        "angleDeg": 69.5
+      },
+      {
+        "distanceM": 0.75,
+        "angleDeg": 67
+      },
+      {
+        "distanceM": 0.85,
+        "angleDeg": 67
+      },
+      {
+        "distanceM": 0.95,
+        "angleDeg": 67
+      },
+      {
+        "distanceM": 1.05,
+        "angleDeg": 67
+      },
+      {
+        "distanceM": 1.15,
+        "angleDeg": 67
+      }
+    ],
+    "nectar": [
+      {
+        "distanceM": 0.65,
+        "angleDeg": 70.5
+      },
+      {
+        "distanceM": 0.75,
+        "angleDeg": 68.5
+      },
+      {
+        "distanceM": 0.85,
+        "angleDeg": 66.5
+      },
+      {
+        "distanceM": 0.95,
+        "angleDeg": 67
+      },
+      {
+        "distanceM": 1.05,
+        "angleDeg": 67
+      }
+    ]
+  },
+  "initialTable": {
+    "pollen": [
+      {
+        "distanceM": 0.45,
+        "angleDeg": 76
+      },
+      {
+        "distanceM": 0.55,
+        "angleDeg": 72.5
+      },
+      {
+        "distanceM": 0.65,
+        "angleDeg": 69.5
+      },
+      {
+        "distanceM": 0.75,
+        "angleDeg": 67
+      },
+      {
+        "distanceM": 0.85,
+        "angleDeg": 67
+      },
+      {
+        "distanceM": 0.95,
+        "angleDeg": 67
+      },
+      {
+        "distanceM": 1.05,
+        "angleDeg": 67
+      },
+      {
+        "distanceM": 1.15,
+        "angleDeg": 67
+      }
+    ],
+    "nectar": [
+      {
+        "distanceM": 0.45,
+        "angleDeg": 77.5
+      },
+      {
+        "distanceM": 0.55,
+        "angleDeg": 73
+      },
+      {
+        "distanceM": 0.65,
+        "angleDeg": 70.5
+      },
+      {
+        "distanceM": 0.75,
+        "angleDeg": 68.5
+      },
+      {
+        "distanceM": 0.85,
+        "angleDeg": 66.5
+      },
+      {
+        "distanceM": 0.95,
+        "angleDeg": 67
+      },
+      {
+        "distanceM": 1.05,
+        "angleDeg": 67
+      },
+      {
+        "distanceM": 1.15,
+        "angleDeg": 66.5
+      }
+    ]
+  },
+  "minimumFitRetention": 0.95
+}

@@ -195,6 +195,7 @@
   <label>Shooter <select id="bcshooter"><option value="dual">Dual, by type</option><option value="fifo">Single, FIFO</option><option value="catapult">Catapult, all 4</option></select></label>
   <label>Intake <select id="bcintake"><option value="front">Front</option><option value="dual">Front and rear</option></select></label>
   <label>Hood control <select id="bchoodmode"><option value="fixed">Fixed angle</option><option value="auto">Automatic by distance</option></select></label>
+  <label id="bchoodaimrow" title="The calibrated table interpolates angles selected from actual retained simulated shots. It will not fire outside the measured distance interval.">Hood aiming <select id="bchoodaim"><option value="calibrated">Calibrated table (linear)</option><option value="ballistic">Trajectory equation</option></select></label>
   <label id="bchoodminrow">Hood minimum, ° <input id="bchoodmin" type="number" min="20" max="80" step="1"></label>
   <label id="bchoodmaxrow">Hood maximum, ° <input id="bchoodmax" type="number" min="20" max="80" step="1"></label>
   <label id="bchoodslewrow">Hood speed, °/s <input id="bchoodslew" type="number" min="1" max="3600" step="10"></label>

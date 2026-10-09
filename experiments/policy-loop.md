@@ -202,3 +202,24 @@ Kept as an optional shooter implementation; fixed angle remains the default. The
 Measured 21 automatic ranges and two fixed-angle controls at eight paired seeds, then three finalists at 24 seeds. All four bots were otherwise identical `defaultBot` builds with fixed rear-facing shooters and front intakes. The recommended automatic default is 55–66° at 120°/s: 767.7 combined points, statistically tied with 20–65° (767.2) and 55–65° (763.3). Against `hood-fixed-reference-20261008` (819.1), `hood-validation-nearby-20261008-55-66` lost 51.4 ± 9.4 combined points (paired SE, n=24). The AUTO component fell from 172.2 to 127.8. This is a configurable mechanism experiment, not a points improvement to the default policy. Existing launch spots and routes were retained; the preview/solver still omit backspin lift.
 
 Ran `npx tsx scripts/eval.ts hood-fixed-reference-20261008 24 6`, the same evaluator through `scripts/hood-sweep.ts`, and `python3 scripts/eval-compare.py hood-fixed-reference-20261008 hood-validation-nearby-20261008-55-66`. Raw per-seed results are in `policy-loop.jsonl`; all tested ranges, confidence limits, assumptions, and reproduction commands are in `hood-results.md`.
+
+## Experimental linear hood map — October 8, 2026
+
+Kept as an optional aiming mode. Fit separate POLLEN/NECTAR distance→angle tables with actual retained
+Rapier shots, then linearly interpolate. A 95% fitting cutoff restricts the calibrated intervals to
+0.65–1.15 m POLLEN and 0.65–1.05 m NECTAR. At midpoint distances on new seeds, 285/288 shots were retained
+(99.0%). Preview/fire control now account for backspin lift and damping in calibrated mode. Fixed
+shooters and the older equation mode retain their existing preview behavior.
+
+Rejected recalculating TELEOP launch positions from calibrated previews: the initial wide table scored
+705.3 combined points (24 seeds), and the narrowed table scored 713.3. Those lost 113.8 ± 10.5 and
+105.8 ± 9.5 paired points against `hood-fixed-reference-20261008`. Preserving reference launch positions
+screened at 833.0 over four seeds, then scored **806.7 ± 7.6** over 24 seeds in
+`hood-calibrated-fixed-spots-20261008`. This is +93.4 ± 8.7 paired points against the narrowed table with
+recomputed spots, but −12.4 ± 6.4 against the fixed reference. AUTO recovered to 171.4 versus fixed's 172.2.
+The mode is kept for configurable experimental interpolation, not as a scoring improvement to the default.
+
+Measured through `node --import tsx scripts/eval.ts` with four identical baseline builds and calibrated
+hood flags, compared with `python3 scripts/eval-compare.py` against both fixed and recomputed-spot rows.
+See [hood-calibration.md](hood-calibration.md) for settings, fitting protocol, paired seeds, raw artifacts,
+assumptions, and reproduction commands. Fixed 67° remains the default.

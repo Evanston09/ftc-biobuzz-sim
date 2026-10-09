@@ -306,7 +306,10 @@ export class Executor {
     // The standoff is measured from the shot preview, which needs this CELL raised and at rest. The two alliances' sides are the same, rotated 180°.
     if (this.spot[key] === undefined && hive.upCell === cell && Math.abs(Math.abs(hive.phi) - HIVE.tiltLimit) < 0.02) {
       const ok: number[] = [];
-      for (let z = 0.75; z <= 1.58; z += 0.02) if (sim.previewShot('pollen', { x, z: side * z, heading: headingAt(side * z) }).scores) ok.push(z);
+      // Keep the reference shooter's launch positions when switching to a calibrated hood.
+      // Actual fire control still predicts the interpolated angle with full airborne physics.
+      const referenceAngle = sim.cfg.shooter.autoHood && sim.cfg.shooter.hoodAimMode === 'calibrated' ? sim.cfg.shooter.hoodAngleDeg ?? sim.cfg.shooter.pollen.elevationDeg.mean : undefined;
+      for (let z = 0.75; z <= 1.58; z += 0.02) if (sim.previewShot('pollen', { x, z: side * z, heading: headingAt(side * z) }, referenceAngle).scores) ok.push(z);
       if (ok.length) this.spot[key] = ok[Math.min(ok.length - 1, Math.floor(ok.length * EXEC.standoff))];
     }
     const z = side * (this.spot[key] ?? 1.3);

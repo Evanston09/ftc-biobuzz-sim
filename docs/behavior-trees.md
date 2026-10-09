@@ -204,7 +204,11 @@ The AUTO trees' launch poses keep their headings. With the turret on all four ro
 13.6 combined points against `e77-wait-until`.
 
 Automatic hood aiming is optional (`autoHood`, `hoodMinDeg`, `hoodMaxDeg`, `hoodSlewDegPerSec`).
-The shooter subsystem solves a bounded elevation to the raised CELL and moves the hood at its configured rate.
+The shooter subsystem either interpolates experimentally retained shots (`hoodAimMode: 'calibrated'`) or
+solves a bounded gravity/drag elevation (`'ballistic'`), and moves the hood at its configured rate. Calibrated
+mode checks the table's measured distance interval and a raised CELL at its stop, and its preview includes lift
+and damping. Distance/angle points are in `src/sim/hood-calibration.json`; fitting and held-out shot scripts
+use the actual physics. The trajectory-equation mode retains its earlier simplified prediction.
 AUTO's `bots.me.shooter.aimed` also waits for hood settling, a stationary chassis, and a scoring preview;
 `shooter.shoot` yields while that condition is false. TELEOP's `Shooter.canShoot` checks hood readiness before
 allowing the launch. The behavior trees keep their existing shooting leaves; they do not command servo angles.

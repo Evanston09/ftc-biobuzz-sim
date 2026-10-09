@@ -1,0 +1,133 @@
+{
+  "trials": 448,
+  "retained": 432,
+  "entered": 433,
+  "rows": [
+    {
+      "kind": "pollen",
+      "distanceM": 0.5,
+      "angleDeg": 74.25,
+      "trials": 32,
+      "entered": 28,
+      "retained": 28,
+      "previewScores": 32
+    },
+    {
+      "kind": "pollen",
+      "distanceM": 0.6,
+      "angleDeg": 71,
+      "trials": 32,
+      "entered": 32,
+      "retained": 32,
+      "previewScores": 32
+    },
+    {
+      "kind": "pollen",
+      "distanceM": 0.7,
+      "angleDeg": 68.25,
+      "trials": 32,
+      "entered": 32,
+      "retained": 32,
+      "previewScores": 32
+    },
+    {
+      "kind": "pollen",
+      "distanceM": 0.8,
+      "angleDeg": 67,
+      "trials": 32,
+      "entered": 32,
+      "retained": 32,
+      "previewScores": 32
+    },
+    {
+      "kind": "pollen",
+      "distanceM": 0.9,
+      "angleDeg": 67,
+      "trials": 32,
+      "entered": 32,
+      "retained": 32,
+      "previewScores": 32
+    },
+    {
+      "kind": "pollen",
+      "distanceM": 1,
+      "angleDeg": 67,
+      "trials": 32,
+      "entered": 32,
+      "retained": 32,
+      "previewScores": 32
+    },
+    {
+      "kind": "pollen",
+      "distanceM": 1.1,
+      "angleDeg": 67,
+      "trials": 32,
+      "entered": 32,
+      "retained": 32,
+      "previewScores": 32
+    },
+    {
+      "kind": "nectar",
+      "distanceM": 0.5,
+      "angleDeg": 75.25,
+      "trials": 32,
+      "entered": 28,
+      "retained": 28,
+      "previewScores": 32
+    },
+    {
+      "kind": "nectar",
+      "distanceM": 0.6,
+      "angleDeg": 71.75,
+      "trials": 32,
+      "entered": 30,
+      "retained": 30,
+      "previewScores": 32
+    },
+    {
+      "kind": "nectar",
+      "distanceM": 0.7,
+      "angleDeg": 69.5,
+      "trials": 32,
+      "entered": 32,
+      "retained": 32,
+      "previewScores": 32
+    },
+    {
+      "kind": "nectar",
+      "distanceM": 0.8,
+      "angleDeg": 67.5,
+      "trials": 32,
+      "entered": 31,
+      "retained": 31,
+      "previewScores": 32
+    },
+    {
+      "kind": "nectar",
+      "distanceM": 0.9,
+      "angleDeg": 66.75,
+      "trials": 32,
+      "entered": 31,
+      "retained": 31,
+      "previewScores": 32
+    },
+    {
+      "kind": "nectar",
+      "distanceM": 1,
+      "angleDeg": 67,
+      "trials": 32,
+      "entered": 32,
+      "retained": 31,
+      "previewScores": 32
+    },
+    {
+      "kind": "nectar",
+      "distanceM": 1.1,
+      "angleDeg": 66.75,
+      "trials": 32,
+      "entered": 29,
+      "retained": 29,
+      "previewScores": 32
+    }
+  ]
+}
