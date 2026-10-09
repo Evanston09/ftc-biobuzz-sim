@@ -223,3 +223,19 @@ Measured through `node --import tsx scripts/eval.ts` with four identical baselin
 hood flags, compared with `python3 scripts/eval-compare.py` against both fixed and recomputed-spot rows.
 See [hood-calibration.md](hood-calibration.md) for settings, fitting protocol, paired seeds, raw artifacts,
 assumptions, and reproduction commands. Fixed 67° remains the default.
+
+## Calibrated hood range spread rerun — October 8, 2026
+
+Added an explicit `calibrated` mode argument to `scripts/hood-sweep.ts`, retaining `ballistic` as the
+script's legacy default. No physical settings or planner defaults changed. Nine configurations were
+screened at eight paired seeds (72 matches), followed by 50–66° and 50–67° at 24 seeds (48 matches).
+The eight-seed fixed control reproduced 815.3 combined points. Calibrated 50–65° scored 732.8;
+50–66° scored 811.9; 50–67° scored 811.0; 50–70°, 50–75°, 50–80°, and 65–80° each scored 811.1 with
+identical per-seed scores; 70–80° scored 775.3. Extra maximum travel does not force the calibrated
+controller to choose a higher arc. Raising the minimum to 70° instead clamps most measured angles.
+
+24-seed validation: 50–66° scored 805.1 ± 7.8 combined points, and 50–67° scored 804.8 ± 6.1.
+`eval-compare.py` measured −0.3 ± 10.8 paired points for 50–67° relative to 50–66°, so neither range
+is a demonstrated winner. Against `hood-fixed-reference-20261008`, their losses were 14.0 ± 11.4
+and 14.3 ± 6.7 respectively. Kept the reproduction tool and experiment records; no default-policy
+change. Commands, full results, and sample sizes are in [hood-calibrated-spread.md](hood-calibrated-spread.md).

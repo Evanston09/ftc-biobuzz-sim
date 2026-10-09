@@ -69,6 +69,8 @@ default TELEOP tree in TELEOP. For how the trees work, see [Behavior-tree polici
   robots use otherwise identical baseline settings and fixed rear-facing shooters. Results go to
   `experiments/policy-loop.jsonl` and `experiments/<tag>.json`. The newer table's measurements and match
   comparison are recorded in `experiments/hood-calibration.md`.
+  Append `calibrated` as the fifth argument to sweep travel limits with the linear table instead:
+  `node --import tsx scripts/hood-sweep.ts 8 6 my-table-spread 'fixed:67,50:65,50:66,50:67,50:70,50:80' calibrated`.
 - **Endgame by value.** When the drive time to the LOADING ZONE says that it is time to PARK, the TELEOP tree's endgame
   branch compares values, on every step: a launch that finishes a TIP is worth 20 points, a launch that doesn't is worth
   2 per element, and PARK is worth 5. In a qualification MATCH, a robot whose PARK the alliance still needs for the
